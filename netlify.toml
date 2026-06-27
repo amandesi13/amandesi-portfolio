@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "https://www.amandesi.in/*"
+  to = "https://amandesi.in/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.amndesi.de/*"
+  to = "https://amndesi.de/:splat"
+  status = 301
+  force = true

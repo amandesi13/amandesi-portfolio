@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Amandeep Singh, M.Sc. Computer Science student at TU Dresden and former Nokia Networks R&D software engineer."
+    />
+    <meta name="theme-color" content="#050807" />
+    <title>Amandeep Singh - Software Engineer Portfolio</title>
+    <link rel="preload" as="image" href="assets/hero-systems-dresden.png" />
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Amandeep Singh home">
+        <span>AS</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#systems">Systems</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-systems-dresden.png" alt="" />
+          <div class="hero-vignette"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>Software engineer / TU Dresden</p>
+          <h1 id="hero-title" data-reveal>
+            Building reliable software for distributed systems.
+          </h1>
+          <p class="hero-lede" data-reveal>
+            I turn complex infrastructure into dependable automation, validation pipelines,
+            and developer tools. Former Nokia Networks R&D engineer, now M.Sc. Computer
+            Science student focused on secure, scalable systems.
+          </p>
+          <div class="hero-actions" data-reveal>
+            <a class="button primary" href="#work">Explore work</a>
+            <a class="button ghost" href="mailto:amandeep.dev.eu@gmail.com">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-signals" aria-label="Engineering focus areas" data-reveal>
+          <article>
+            <strong>5G architecture</strong>
+            <span>R&D experience across distributed telecom systems and validation flows.</span>
+          </article>
+          <article>
+            <strong>Firewall enhancement</strong>
+            <span>Security validation, rule-flow reasoning, automation, and debugging.</span>
+          </article>
+          <article>
+            <strong>VPP / DPDK</strong>
+            <span>Data-plane concepts, packet-processing performance, and integration work.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="profile band">
+        <figure class="portrait" data-reveal>
+          <img src="assets/amandeep-singh-portrait.png" alt="Amandeep Singh" />
+        </figure>
+        <div class="profile-copy" data-reveal>
+          <p class="eyebrow">About me</p>
+          <h2>Engineering with production context.</h2>
+          <p>
+            I work where software meets real operational pressure: 5G architecture,
+            Linux systems, firewall enhancement, CI/CD validation, Python automation,
+            C/C++ codebases, VPP/DPDK data-plane concepts, structured logs, and
+            cross-team release quality.
+          </p>
+        </div>
+      </section>
+
+      <section class="showcase" id="work">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Selected experience</p>
+          <h2>Nokia Networks R&D</h2>
+        </div>
+        <div class="pin-stack">
+          <article class="feature-card panel">
+            <span class="panel-index">01</span>
+            <h3>Automation for telecom validation</h3>
+            <p>
+              Developed Python tools and shell scripts for system-level validation,
+              log analysis, and repeatable workflows across large-scale distributed
+              telecom infrastructure.
+            </p>
+          </article>
+          <article class="feature-card panel">
+            <span class="panel-index">02</span>
+            <h3>Firewall enhancement and validation</h3>
+            <p>
+              Worked on firewall-oriented validation and system behavior checks for
+              telecom software, connecting rule-flow reasoning, automated testing,
+              release gates, and production debugging.
+            </p>
+          </article>
+          <article class="feature-card panel">
+            <span class="panel-index">03</span>
+            <h3>Data-plane module integration</h3>
+            <p>
+              Owned the integration layer for Marvell data-plane modules inside Nokia's
+              internal repository, including unit tests, coordination, and practical
+              exposure to packet-processing concepts around VPP, DPDK, and high-throughput
+              network software.
+            </p>
+          </article>
+          <article class="feature-card panel">
+            <span class="panel-index">04</span>
+            <h3>Root-cause debugging at scale</h3>
+            <p>
+              Resolved production issues involving memory safety, networking behavior,
+              runtime reliability, and distributed diagnostics using Linux tooling and
+              structured log analysis.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Portfolio projects</p>
+          <h2>Systems that explain how I think.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Python / Docker / CI/CD</p>
+            <h3>AI-Assisted Firewall Validation Engine</h3>
+            <p>
+              A modular Python rule-validation engine that simulates firewall execution
+              flow, automates security validation, and uses LLM-assisted anomaly detection
+              to flag rule behavior that deserves human review.
+            </p>
+            <ul>
+              <li>Pipeline-based validator architecture</li>
+              <li>Containerized execution with Docker</li>
+              <li>Designed for developer tooling and CI checks</li>
+            </ul>
+          </article>
+          <article class="project-card alt" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Python / Kubernetes / Data pipelines</p>
+            <h3>Distributed Log Monitoring & Alerting</h3>
+            <p>
+              A real-time log processing system for anomaly detection and automated
+              alerting, deployed as scalable microservices and shaped by production
+              debugging experience.
+            </p>
+            <ul>
+              <li>Streaming log processing and anomaly checks</li>
+              <li>Docker/Kubernetes deployment model</li>
+              <li>Operational alerts for abnormal system behavior</li>
+            </ul>
+          </article>
+          <article class="project-card current" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Llama / Maven / Developer tooling</p>
+            <h3>LLM Architecture & Build Tooling Lab</h3>
+            <p>
+              Current learning and prototyping around Llama-based LLM architectures,
+              retrieval workflows, evaluation loops, and Java/Maven project structure
+              for production-style developer tools.
+            </p>
+            <ul>
+              <li>Llama-style local model architecture study</li>
+              <li>Prompting, retrieval, and evaluation patterns</li>
+              <li>Maven-based build and dependency workflows</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="systems" id="systems">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Engineering range</p>
+          <h2>Comfortable across the stack that keeps systems alive.</h2>
+        </div>
+        <div class="skill-marquee" aria-label="Technical skills" data-reveal>
+          <div>
+            <span>Python</span>
+            <span>C/C++</span>
+            <span>Bash</span>
+            <span>Linux</span>
+            <span>Git</span>
+            <span>CI/CD</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>5G architecture</span>
+            <span>Firewall enhancement</span>
+            <span>VPP</span>
+            <span>DPDK</span>
+            <span>Llama architectures</span>
+            <span>Maven</span>
+            <span>REST APIs</span>
+            <span>SQL concepts</span>
+          </div>
+        </div>
+        <div class="systems-grid">
+          <article data-reveal>
+            <h3>5G and data-plane systems</h3>
+            <p>
+              Experience with 5G telecom architecture, firewall enhancement, distributed
+              diagnostics, and data-plane integration concepts including VPP and DPDK.
+            </p>
+          </article>
+          <article data-reveal>
+            <h3>LLM and developer tooling</h3>
+            <p>
+              Currently building skills around Llama-based LLM architectures, retrieval
+              workflows, evaluation loops, automation agents, Java/Maven tooling, and
+              production-minded project structure.
+            </p>
+          </article>
+          <article data-reveal>
+            <h3>Security and documentation</h3>
+            <p>
+              Trained in secure C/C++, vulnerability identification, memory safety, and
+              fault-tolerant low-level design; authored Nokia internal documentation on
+              Kubernetes frameworks and co-authored an IEEE paper on 6G privacy/security.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline band">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Trajectory</p>
+          <h2>From production engineering to advanced computer science.</h2>
+        </div>
+        <ol>
+          <li data-reveal>
+            <time>2018 - 2022</time>
+            <span>B.E. Information Science & Engineering, BMS Institute of Technology</span>
+          </li>
+          <li data-reveal>
+            <time>2022 - 2025</time>
+            <span>Software Engineer, R&D, Nokia Networks, Bengaluru</span>
+          </li>
+          <li data-reveal>
+            <time>2025 - present</time>
+            <span>M.Sc. Computer Science, Technische Universitat Dresden</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="contact" id="contact" data-reveal>
+        <p class="eyebrow">Available for working student roles</p>
+        <h2>Let’s build resilient tools, validation systems, and infrastructure software.</h2>
+        <div class="contact-links">
+          <a href="mailto:amandeep.dev.eu@gmail.com">amandeep.dev.eu@gmail.com</a>
+          <a href="https://www.linkedin.com/in/amandesi/">linkedin.com/in/amandesi</a>
+          <a href="tel:+491743482786">+49 174 3482786</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Amandeep Singh</span>
+      <span>Dresden, Germany</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
