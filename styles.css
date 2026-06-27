@@ -4,8 +4,9 @@
   --ink: #f5f7f2;
   --muted: #aeb8ae;
   --line: rgba(245, 247, 242, 0.16);
-  --green: #8ee6b4;
-  --amber: #f5c46b;
+  --blue: #7bb7ff;
+  --blue-deep: #2f80ed;
+  --amber: #b9d9ff;
   --steel: #9fb5bd;
   --max: 1180px;
 }
@@ -45,7 +46,7 @@ img {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(142, 230, 180, 0.14), transparent 65%);
+  background: radial-gradient(circle, rgba(123, 183, 255, 0.16), transparent 65%);
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
   z-index: 1;
@@ -151,7 +152,7 @@ nav a:focus-visible {
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--green);
+  color: var(--blue);
   font-size: 0.78rem;
   font-weight: 780;
   letter-spacing: 0;
@@ -317,9 +318,9 @@ h3 {
 
 .showcase {
   background:
-    linear-gradient(rgba(142, 230, 180, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(142, 230, 180, 0.05) 1px, transparent 1px),
-    #07100d;
+    linear-gradient(rgba(123, 183, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123, 183, 255, 0.06) 1px, transparent 1px),
+    #070d12;
   background-size: 42px 42px;
 }
 
@@ -394,7 +395,7 @@ h3 {
   border-radius: 8px;
   padding: clamp(24px, 4vw, 42px);
   background:
-    radial-gradient(circle at 70% 24%, rgba(142, 230, 180, 0.24), transparent 28%),
+    radial-gradient(circle at 70% 24%, rgba(123, 183, 255, 0.24), transparent 28%),
     linear-gradient(160deg, #101917, #070b0a 72%);
 }
 
@@ -429,7 +430,7 @@ h3 {
   border-radius: 50%;
   background:
     radial-gradient(circle, rgba(245, 247, 242, 0.7) 0 3px, transparent 4px),
-    conic-gradient(from 70deg, transparent 0 18%, rgba(142, 230, 180, 0.55), transparent 52%),
+    conic-gradient(from 70deg, transparent 0 18%, rgba(123, 183, 255, 0.58), transparent 52%),
     radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 62%);
   animation: rotate 18s linear infinite;
 }
@@ -455,7 +456,7 @@ h3 {
 }
 
 .systems .eyebrow {
-  color: #2d7f56;
+  color: var(--blue-deep);
 }
 
 .systems-grid {
@@ -532,7 +533,7 @@ h3 {
   display: grid;
   align-content: center;
   background:
-    radial-gradient(circle at 18% 18%, rgba(142, 230, 180, 0.18), transparent 26%),
+    radial-gradient(circle at 18% 18%, rgba(123, 183, 255, 0.2), transparent 26%),
     radial-gradient(circle at 80% 72%, rgba(245, 196, 107, 0.16), transparent 28%),
     #050807;
 }
