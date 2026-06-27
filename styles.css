@@ -593,6 +593,17 @@ footer {
     width: min(calc(100% - 20px), var(--max));
   }
 
+  .hero-media img {
+    object-position: 88% center;
+    filter: saturate(0.98) contrast(1.04) brightness(0.72);
+  }
+
+  .hero-vignette {
+    background:
+      linear-gradient(90deg, rgba(5, 8, 7, 0.94), rgba(5, 8, 7, 0.7) 54%, rgba(5, 8, 7, 0.26)),
+      linear-gradient(0deg, var(--bg) 0%, rgba(5, 8, 7, 0.5) 26%, rgba(5, 8, 7, 0.18) 66%);
+  }
+
   nav a {
     min-width: 0;
     padding-inline: 9px;
@@ -667,6 +678,34 @@ footer {
     padding: 10px;
   }
 
+  .hero {
+    min-height: auto;
+    align-items: start;
+    padding-top: 390px;
+    background: var(--bg);
+  }
+
+  .hero-media {
+    height: 380px;
+    bottom: auto;
+  }
+
+  .hero-media img {
+    object-position: center center;
+    filter: saturate(0.98) contrast(1.03) brightness(0.9);
+    transform: scale(1);
+  }
+
+  .hero-vignette {
+    background:
+      linear-gradient(180deg, rgba(5, 8, 7, 0.04) 0%, rgba(5, 8, 7, 0.18) 54%, var(--bg) 100%),
+      linear-gradient(90deg, rgba(5, 8, 7, 0.15), rgba(5, 8, 7, 0.02));
+  }
+
+  .hero-copy {
+    padding-bottom: 26px;
+  }
+
   nav {
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -677,7 +716,7 @@ footer {
   }
 
   h1 {
-    font-size: clamp(2.75rem, 16vw, 3.85rem);
+    font-size: clamp(2.45rem, 14vw, 3.45rem);
   }
 
   .contact-links a {
