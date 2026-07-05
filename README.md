@@ -2,7 +2,7 @@
 
 Personal portfolio website for Amandeep Singh, a software engineer and M.Sc. Computer Science student at TU Dresden.
 
-The site presents my journey as a practical software engineer who turns everyday problems into useful tools, with projects spanning document assistants, technical PDF translation, applied data mining, LLM notebooks, security validation, and production telecom software.
+The site presents my journey as a practical software engineer who turns everyday confusion into useful tools. It highlights my problem-first engineering loop, my best product-style projects, and the production discipline I gained from Nokia Networks R&D.
 
 ## Live Site
 
@@ -12,8 +12,10 @@ The site presents my journey as a practical software engineer who turns everyday
 
 - Apple-inspired responsive portfolio design
 - TUD hero photography and personal profile section
-- Experience highlights from Nokia Networks R&D and OPG-layer ownership during Marvell integration
-- Product-led project sections for Auslander Doc Assistant, Technical PDF Translator for Students, Market Basket Analysis, LLM work, and RAN observability
+- "How I think" section adapted from my GitHub profile README
+- Experience highlights from Nokia Networks R&D and OPG-layer ownership during Marvell data-plane integration
+- Product-led project sections for Auslander Doc Assistant, Technical PDF Translator for Students, AI-Assisted Firewall Validation Engine, and OAI RAN Metrics xApp Lab
+- Applied AI and data case studies for Llama notebook work and Market Basket Analysis
 - Case-study markdown pages for Kaggle projects
 - Built with plain HTML, CSS, and JavaScript for fast static hosting
 

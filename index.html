@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#050807" />
     <title>Amandeep Singh - Practical Software Engineer</title>
     <link rel="preload" as="image" href="assets/tud-hero-amandeep.jpeg" />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="stylesheet" href="styles.css?v=9" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -21,6 +21,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#journey">Journey</a>
+        <a href="#thinking">Thinking</a>
         <a href="#projects">Projects</a>
         <a href="#work">Work</a>
         <a href="#systems">Skills</a>
@@ -37,12 +38,12 @@
         <div class="hero-copy">
           <p class="eyebrow" data-reveal>Introducing Amandeep Singh</p>
           <h1 id="hero-title" data-reveal>
-            Software engineer for practical problems people actually face.
+            I turn everyday confusion into practical software.
           </h1>
           <p class="hero-lede" data-reveal>
-            I build useful software from real pain points: document assistants for newcomers,
-            technical PDF translators for students, data products for decisions, and reliable
-            systems shaped by production R&D at Nokia.
+            I build from real pain points: bureaucracy assistants for newcomers,
+            technical PDF translators for students, data products for decisions, and
+            reliable systems shaped by production R&D at Nokia.
           </p>
           <div class="hero-actions" data-reveal>
             <a class="button primary" href="#projects">Explore projects</a>
@@ -56,7 +57,7 @@
           </article>
           <article>
             <strong>Software ownership</strong>
-            <span>Owned OPG-layer integration work during Marvell data-plane migration into Nokia.</span>
+            <span>Owned OPG-layer work during Marvell data-plane integration into Nokia.</span>
           </article>
           <article>
             <strong>AI and data</strong>
@@ -74,10 +75,46 @@
           <h2>I like software that removes friction.</h2>
           <p>
             My strongest pattern is practical problem solving. I notice repeated pain,
-            model it clearly, then build tools that make the next step easier. Nokia gave
-            me production discipline; TU Dresden is helping me sharpen software management,
-            quality assurance, future-proof systems, and modern AI foundations.
+            model it clearly, then build tools that make the next step easier. Telecom
+            is an important chapter of my journey, not the whole story: Nokia taught me
+            production discipline, and TU Dresden is helping me sharpen software
+            management, quality assurance, future-proof systems, distributed systems,
+            and modern AI foundations.
           </p>
+        </div>
+      </section>
+
+      <section class="thinking band" id="thinking">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">How I think</p>
+          <h2>My engineering loop starts with a real person stuck somewhere.</h2>
+        </div>
+        <div class="thinking-grid">
+          <article class="thinking-card" data-reveal>
+            <span>01</span>
+            <h3>Start from pain</h3>
+            <p>Find the confusing, repeated workflow before choosing the technology.</p>
+          </article>
+          <article class="thinking-card" data-reveal>
+            <span>02</span>
+            <h3>Make uncertainty visible</h3>
+            <p>Turn messy inputs into deadlines, actions, risks, decisions, and next steps.</p>
+          </article>
+          <article class="thinking-card" data-reveal>
+            <span>03</span>
+            <h3>Ship the smallest useful system</h3>
+            <p>Build something that works end to end, then improve the parts that matter.</p>
+          </article>
+          <article class="thinking-card" data-reveal>
+            <span>04</span>
+            <h3>Add trust</h3>
+            <p>Use tests, automation, documentation, and operational thinking so people can rely on it.</p>
+          </article>
+          <article class="thinking-card wide" data-reveal>
+            <span>05</span>
+            <h3>Keep it understandable</h3>
+            <p>Software should be clear enough for another engineer to extend and for a user to trust.</p>
+          </article>
         </div>
       </section>
 
@@ -108,13 +145,13 @@
 
       <section class="projects" id="projects">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Practical products</p>
-          <h2>Projects that show how I solve everyday problems.</h2>
+          <p class="eyebrow">Featured work</p>
+          <h2>Projects worth highlighting because they solve real problems.</h2>
         </div>
         <div class="project-grid">
           <article class="project-card current" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Consumer product / FastAPI / OCR</p>
+            <p class="eyebrow">Best proof: consumer product / FastAPI / OCR</p>
             <h3>Auslander Doc Assistant</h3>
             <p>
               A privacy-first assistant for international students and newcomers in Germany.
@@ -122,9 +159,9 @@
               creates an action checklist, and drafts a polite German reply.
             </p>
             <ul>
-              <li>Turns confusing German letters into clear next steps</li>
-              <li>PDF/image/text ingestion with optional OCR</li>
-              <li>Built from a real problem I faced as an international student</li>
+              <li>Problem: newcomers receive official letters and do not know what to do next</li>
+              <li>Build: PDF/image/text ingestion, OCR, structured extraction, checklist generation</li>
+              <li>Why it matters: it is a real product idea from my own life in Germany</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/amandesi13/auslander-doc-assistant">GitHub</a>
@@ -132,7 +169,7 @@
           </article>
           <article class="project-card" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Python / PyMuPDF / Tesseract</p>
+            <p class="eyebrow">Student tool / Python / PyMuPDF / Tesseract</p>
             <h3>Technical PDF Translator for Students</h3>
             <p>
               German-to-English technical PDF translator for students. It extracts normal
@@ -140,9 +177,9 @@
               and scanned graphics.
             </p>
             <ul>
-              <li>Designed for lecture notes, datasheets, and lab manuals</li>
-              <li>Markdown, JSON, and HTML review outputs</li>
-              <li>Extensible translation adapters for DeepL, Argos, and demos</li>
+              <li>Problem: lecture notes and lab manuals hide meaning inside diagrams and scans</li>
+              <li>Build: text extraction plus OCR with Markdown, JSON, and HTML review outputs</li>
+              <li>Why it matters: it helps students actually understand technical material faster</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/amandesi13/pdf-de2en-ocr-lens">GitHub</a>
@@ -150,7 +187,7 @@
           </article>
           <article class="project-card alt" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Data mining / Retail analytics</p>
+            <p class="eyebrow">Data product thinking / Retail analytics</p>
             <h3>Market Basket Analysis</h3>
             <p>
               Association-rules mining project from my B.E. days that studies purchase
@@ -158,18 +195,18 @@
               retail insights.
             </p>
             <ul>
-              <li>Apriori-style association rules and support/confidence thinking</li>
-              <li>Practical recommendation and bundling use case</li>
-              <li>Early proof that I enjoy applied software, not just theory</li>
+              <li>Problem: raw transactions do not directly explain customer behavior</li>
+              <li>Build: association rules, support/confidence analysis, and practical insight framing</li>
+              <li>Why it matters: early proof that I like applied software, not just theory</li>
             </ul>
             <div class="project-links">
-              <a href="https://www.kaggle.com/code/dhanjal13/association-rules-mining-market-basket-analysis/edit">Kaggle</a>
+              <a href="https://www.kaggle.com/code/dhanjal13/association-rules-mining-market-basket-analysis">Kaggle</a>
               <a href="https://github.com/amandesi13/amandesi-portfolio/blob/main/case-studies/market-basket-analysis.md">Case study</a>
             </div>
           </article>
           <article class="project-card" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">LLMs / Kaggle / Applied AI</p>
+            <p class="eyebrow">Applied AI / Kaggle / LLM workflows</p>
             <h3>Llama Notebook Exploration</h3>
             <p>
               Hands-on LLM notebook work adapted from Meta's Llama material, focused on
@@ -177,9 +214,9 @@
               where LLMs can be useful in real software products.
             </p>
             <ul>
-              <li>Practical working knowledge of LLM workflows</li>
-              <li>Foundation for AI-assisted document and developer tools</li>
-              <li>Connects my master's LLM coursework to buildable products</li>
+              <li>Problem: LLMs are useful only when you understand their workflow limits</li>
+              <li>Build: practical notebook exploration of prompting, inference, and behavior</li>
+              <li>Why it matters: foundation for AI-assisted document and developer tools</li>
             </ul>
             <div class="project-links">
               <a href="https://www.kaggle.com/code/dhanjal13/llm-final">Kaggle</a>
@@ -188,7 +225,7 @@
           </article>
           <article class="project-card alt" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Python / Security / CI</p>
+            <p class="eyebrow">Security automation / Python / CI</p>
             <h3>AI-Assisted Firewall Validation Engine</h3>
             <p>
               A rule-validation engine that simulates firewall execution flow, detects
@@ -196,9 +233,9 @@
               automation.
             </p>
             <ul>
-              <li>First-match rule-flow reasoning</li>
-              <li>Docker and GitHub Actions support</li>
-              <li>Security validation shaped by production debugging</li>
+              <li>Problem: firewall policies can look valid while hiding risky rule behavior</li>
+              <li>Build: first-match rule-flow simulation, reports, Docker, and GitHub Actions</li>
+              <li>Why it matters: security validation shaped by production debugging habits</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">GitHub</a>
@@ -206,7 +243,7 @@
           </article>
           <article class="project-card" data-reveal>
             <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">RAN / Observability / xApp</p>
+            <p class="eyebrow">Telecom bridge / RAN / Observability / xApp</p>
             <h3>OAI RAN Metrics xApp Lab</h3>
             <p>
               A telecom chapter project: an OpenAirInterface-inspired RAN observability
@@ -214,9 +251,9 @@
               and Prometheus/Grafana monitoring.
             </p>
             <ul>
-              <li>Shows my Nokia and ComNets direction without boxing me in</li>
-              <li>Models congestion, packet loss, SINR, BLER, and latency</li>
-              <li>Built as a bridge toward real OAI/xChain work</li>
+              <li>Problem: RAN research needs reliable metrics before evaluation is meaningful</li>
+              <li>Build: simulated KPIs, xApp-style collection, anomaly detection, dashboards</li>
+              <li>Why it matters: connects my Nokia and ComNets chapter to software observability</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">GitHub</a>
