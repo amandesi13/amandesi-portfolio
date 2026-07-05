@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfolio of Amandeep Singh, M.Sc. Computer Science student at TU Dresden and former Nokia Networks R&D software engineer."
+      content="Amandeep Singh is a software engineer who turns everyday problems into practical, reliable products across documents, AI, data, telecom, and automation."
     />
     <meta name="theme-color" content="#050807" />
-    <title>Amandeep Singh - Software Engineer Portfolio</title>
+    <title>Amandeep Singh - Practical Software Engineer</title>
     <link rel="preload" as="image" href="assets/tud-hero-amandeep.jpeg" />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -20,9 +20,10 @@
         <span>AS</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#journey">Journey</a>
         <a href="#projects">Projects</a>
-        <a href="#systems">Systems</a>
+        <a href="#work">Work</a>
+        <a href="#systems">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -36,30 +37,30 @@
         <div class="hero-copy">
           <p class="eyebrow" data-reveal>Introducing Amandeep Singh</p>
           <h1 id="hero-title" data-reveal>
-            Software engineer for reliable, intelligent systems.
+            Software engineer for practical problems people actually face.
           </h1>
           <p class="hero-lede" data-reveal>
-            Former Nokia Networks R&D engineer and current M.Sc. Computer Science student
-            at TU Dresden, building automation, validation pipelines, firewall tooling,
-            and LLM-assisted developer systems.
+            I build useful software from real pain points: document assistants for newcomers,
+            technical PDF translators for students, data products for decisions, and reliable
+            systems shaped by production R&D at Nokia.
           </p>
           <div class="hero-actions" data-reveal>
-            <a class="button primary" href="#work">Explore work</a>
+            <a class="button primary" href="#projects">Explore projects</a>
             <a class="button ghost" href="mailto:amandeep.dev.eu@gmail.com">Get in touch</a>
           </div>
         </div>
         <div class="hero-signals" aria-label="Engineering focus areas" data-reveal>
           <article>
-            <strong>5G architecture</strong>
-            <span>R&D experience across distributed telecom systems and validation flows.</span>
+            <strong>Product thinking</strong>
+            <span>Start with the everyday problem, then design the smallest useful system.</span>
           </article>
           <article>
-            <strong>Firewall enhancement</strong>
-            <span>Security validation, rule-flow reasoning, automation, and debugging.</span>
+            <strong>Software ownership</strong>
+            <span>Owned OPG-layer integration work during Marvell data-plane migration into Nokia.</span>
           </article>
           <article>
-            <strong>VPP / DPDK</strong>
-            <span>Data-plane concepts, packet-processing performance, and integration work.</span>
+            <strong>AI and data</strong>
+            <span>Hands-on LLM notebooks, OCR products, market-basket analysis, and automation.</span>
           </article>
         </div>
       </section>
@@ -70,112 +71,201 @@
         </figure>
         <div class="profile-copy" data-reveal>
           <p class="eyebrow">About me</p>
-          <h2>Engineering with production context.</h2>
+          <h2>I like software that removes friction.</h2>
           <p>
-            I work where software meets real operational pressure: 5G architecture,
-            Linux systems, firewall enhancement, CI/CD validation, Python automation,
-            C/C++ codebases, VPP/DPDK data-plane concepts, structured logs, and
-            cross-team release quality.
+            My strongest pattern is practical problem solving. I notice repeated pain,
+            model it clearly, then build tools that make the next step easier. Nokia gave
+            me production discipline; TU Dresden is helping me sharpen software management,
+            quality assurance, future-proof systems, and modern AI foundations.
           </p>
+        </div>
+      </section>
+
+      <section class="timeline band" id="journey">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Journey</p>
+          <h2>Why I build the way I build.</h2>
+        </div>
+        <ol>
+          <li data-reveal>
+            <time>First spark</time>
+            <span>Technology became personal early. Nokia was the first phone I used, and later became the first dream company where I learned what production software really means.</span>
+          </li>
+          <li data-reveal>
+            <time>2018 - 2022</time>
+            <span>B.E. Information Science & Engineering, where I explored applied data work including association-rules market basket analysis.</span>
+          </li>
+          <li data-reveal>
+            <time>2022 - 2025</time>
+            <span>Nokia Networks R&D: C/C++, Python, Linux, validation pipelines, production debugging, and OPG-layer ownership during Marvell data-plane integration.</span>
+          </li>
+          <li data-reveal>
+            <time>2025 - now</time>
+            <span>M.Sc. Computer Science at TU Dresden to polish my engineering judgment through software management, quality assurance, future-proof systems, distributed systems, and LLMs.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Practical products</p>
+          <h2>Projects that show how I solve everyday problems.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card current" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Consumer product / FastAPI / OCR</p>
+            <h3>Auslander Doc Assistant</h3>
+            <p>
+              A privacy-first assistant for international students and newcomers in Germany.
+              It analyzes bureaucracy documents, extracts deadlines and required documents,
+              creates an action checklist, and drafts a polite German reply.
+            </p>
+            <ul>
+              <li>Turns confusing German letters into clear next steps</li>
+              <li>PDF/image/text ingestion with optional OCR</li>
+              <li>Built from a real problem I faced as an international student</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/amandesi13/auslander-doc-assistant">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Python / PyMuPDF / Tesseract</p>
+            <h3>Technical PDF Translator for Students</h3>
+            <p>
+              German-to-English technical PDF translator for students. It extracts normal
+              PDF text and OCRs rendered pages to catch words inside diagrams, screenshots,
+              and scanned graphics.
+            </p>
+            <ul>
+              <li>Designed for lecture notes, datasheets, and lab manuals</li>
+              <li>Markdown, JSON, and HTML review outputs</li>
+              <li>Extensible translation adapters for DeepL, Argos, and demos</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/amandesi13/pdf-de2en-ocr-lens">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card alt" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Data mining / Retail analytics</p>
+            <h3>Market Basket Analysis</h3>
+            <p>
+              Association-rules mining project from my B.E. days that studies purchase
+              patterns and item relationships, turning transaction data into practical
+              retail insights.
+            </p>
+            <ul>
+              <li>Apriori-style association rules and support/confidence thinking</li>
+              <li>Practical recommendation and bundling use case</li>
+              <li>Early proof that I enjoy applied software, not just theory</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.kaggle.com/code/dhanjal13/association-rules-mining-market-basket-analysis/edit">Kaggle</a>
+              <a href="https://github.com/amandesi13/amandesi-portfolio/blob/main/case-studies/market-basket-analysis.md">Case study</a>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">LLMs / Kaggle / Applied AI</p>
+            <h3>Llama Notebook Exploration</h3>
+            <p>
+              Hands-on LLM notebook work adapted from Meta's Llama material, focused on
+              understanding modern model workflows, prompting, inference behavior, and
+              where LLMs can be useful in real software products.
+            </p>
+            <ul>
+              <li>Practical working knowledge of LLM workflows</li>
+              <li>Foundation for AI-assisted document and developer tools</li>
+              <li>Connects my master's LLM coursework to buildable products</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.kaggle.com/code/dhanjal13/llm-final">Kaggle</a>
+              <a href="https://github.com/amandesi13/amandesi-portfolio/blob/main/case-studies/llm-notebook.md">Case study</a>
+            </div>
+          </article>
+          <article class="project-card alt" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">Python / Security / CI</p>
+            <h3>AI-Assisted Firewall Validation Engine</h3>
+            <p>
+              A rule-validation engine that simulates firewall execution flow, detects
+              risky rule behavior, and turns security checks into developer-friendly
+              automation.
+            </p>
+            <ul>
+              <li>First-match rule-flow reasoning</li>
+              <li>Docker and GitHub Actions support</li>
+              <li>Security validation shaped by production debugging</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card" data-reveal>
+            <div class="project-orbit" aria-hidden="true"></div>
+            <p class="eyebrow">RAN / Observability / xApp</p>
+            <h3>OAI RAN Metrics xApp Lab</h3>
+            <p>
+              A telecom chapter project: an OpenAirInterface-inspired RAN observability
+              lab with simulated cell/UE KPIs, xApp-style collection, anomaly detection,
+              and Prometheus/Grafana monitoring.
+            </p>
+            <ul>
+              <li>Shows my Nokia and ComNets direction without boxing me in</li>
+              <li>Models congestion, packet loss, SINR, BLER, and latency</li>
+              <li>Built as a bridge toward real OAI/xChain work</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">GitHub</a>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="showcase" id="work">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Selected experience</p>
-          <h2>Nokia Networks R&D</h2>
+          <p class="eyebrow">Production experience</p>
+          <h2>Nokia taught me ownership.</h2>
         </div>
         <div class="pin-stack">
           <article class="feature-card panel">
             <span class="panel-index">01</span>
-            <h3>Automation for telecom validation</h3>
+            <h3>Owned OPG-layer integration work</h3>
             <p>
-              Developed Python tools and shell scripts for system-level validation,
-              log analysis, and repeatable workflows across large-scale distributed
-              telecom infrastructure.
+              As part of the Marvell acquisition integration into Nokia, I owned and
+              managed OPG-layer work around data-plane module migration, QoS integration,
+              unit testing, and coordination across repository boundaries.
             </p>
           </article>
           <article class="feature-card panel">
             <span class="panel-index">02</span>
-            <h3>Firewall enhancement and validation</h3>
+            <h3>Software management in practice</h3>
             <p>
-              Worked on firewall-oriented validation and system behavior checks for
-              telecom software, connecting rule-flow reasoning, automated testing,
-              release gates, and production debugging.
+              That ownership mapped directly to software management: understanding
+              changing requirements, coordinating technical dependencies, protecting
+              quality gates, and keeping feature delivery grounded in test evidence.
             </p>
           </article>
           <article class="feature-card panel">
             <span class="panel-index">03</span>
-            <h3>Data-plane module integration</h3>
+            <h3>Automation for validation and release quality</h3>
             <p>
-              Owned the integration layer for Marvell data-plane modules inside Nokia's
-              internal repository, including unit tests, coordination, and practical
-              exposure to packet-processing concepts around VPP, DPDK, and high-throughput
-              network software.
+              Built and improved Python, shell, and CI/CD validation workflows for
+              repeatable checks, log analysis, and pre-deployment confidence across
+              large distributed telecom systems.
             </p>
           </article>
           <article class="feature-card panel">
             <span class="panel-index">04</span>
-            <h3>Root-cause debugging at scale</h3>
+            <h3>Root-cause debugging under pressure</h3>
             <p>
-              Resolved production issues involving memory safety, networking behavior,
-              runtime reliability, and distributed diagnostics using Linux tooling and
-              structured log analysis.
+              Resolved production defects involving memory safety, networking behavior,
+              runtime reliability, deployment validation, and hardware/software boundary
+              issues using Linux tooling, packet captures, traces, and structured logs.
             </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="projects" id="projects">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Portfolio projects</p>
-          <h2>Systems that explain how I think.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card" data-reveal>
-            <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Python / Docker / CI/CD</p>
-            <h3>AI-Assisted Firewall Validation Engine</h3>
-            <p>
-              A modular Python rule-validation engine that simulates firewall execution
-              flow, automates security validation, and uses LLM-assisted anomaly detection
-              to flag rule behavior that deserves human review.
-            </p>
-            <ul>
-              <li>Pipeline-based validator architecture</li>
-              <li>Containerized execution with Docker</li>
-              <li>Designed for developer tooling and CI checks</li>
-            </ul>
-          </article>
-          <article class="project-card alt" data-reveal>
-            <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Python / Kubernetes / Data pipelines</p>
-            <h3>Distributed Log Monitoring & Alerting</h3>
-            <p>
-              A real-time log processing system for anomaly detection and automated
-              alerting, deployed as scalable microservices and shaped by production
-              debugging experience.
-            </p>
-            <ul>
-              <li>Streaming log processing and anomaly checks</li>
-              <li>Docker/Kubernetes deployment model</li>
-              <li>Operational alerts for abnormal system behavior</li>
-            </ul>
-          </article>
-          <article class="project-card current" data-reveal>
-            <div class="project-orbit" aria-hidden="true"></div>
-            <p class="eyebrow">Llama / Maven / Developer tooling</p>
-            <h3>LLM Architecture & Build Tooling Lab</h3>
-            <p>
-              Current learning and prototyping around Llama-based LLM architectures,
-              retrieval workflows, evaluation loops, and Java/Maven project structure
-              for production-style developer tools.
-            </p>
-            <ul>
-              <li>Llama-style local model architecture study</li>
-              <li>Prompting, retrieval, and evaluation patterns</li>
-              <li>Maven-based build and dependency workflows</li>
-            </ul>
           </article>
         </div>
       </section>
@@ -183,7 +273,7 @@
       <section class="systems" id="systems">
         <div class="section-heading" data-reveal>
           <p class="eyebrow">Engineering range</p>
-          <h2>Comfortable across the stack that keeps systems alive.</h2>
+          <h2>Practical skills, from product idea to reliable system.</h2>
         </div>
         <div class="skill-marquee" aria-label="Technical skills" data-reveal>
           <div>
@@ -195,67 +285,49 @@
             <span>CI/CD</span>
             <span>Docker</span>
             <span>Kubernetes</span>
-            <span>5G architecture</span>
-            <span>Firewall enhancement</span>
+            <span>Product thinking</span>
+            <span>Quality assurance</span>
+            <span>Software management</span>
+            <span>OCR</span>
+            <span>LLMs</span>
+            <span>Market basket analysis</span>
             <span>VPP</span>
             <span>DPDK</span>
-            <span>Llama architectures</span>
-            <span>Maven</span>
             <span>REST APIs</span>
             <span>SQL concepts</span>
           </div>
         </div>
         <div class="systems-grid">
           <article data-reveal>
-            <h3>5G and data-plane systems</h3>
+            <h3>Practical product engineering</h3>
             <p>
-              Experience with 5G telecom architecture, firewall enhancement, distributed
-              diagnostics, and data-plane integration concepts including VPP and DPDK.
+              I turn repeated user pain into concrete workflows: extract the document,
+              identify the action, reduce uncertainty, and ship a usable tool rather
+              than only a demo.
             </p>
           </article>
           <article data-reveal>
-            <h3>LLM and developer tooling</h3>
+            <h3>Software management and quality</h3>
             <p>
-              Currently building skills around Llama-based LLM architectures, retrieval
-              workflows, evaluation loops, automation agents, Java/Maven tooling, and
-              production-minded project structure.
+              OPG ownership at Nokia gave me real release coordination experience, now
+              strengthened through master's coursework in software management, quality
+              assurance, and future-proof software systems.
             </p>
           </article>
           <article data-reveal>
-            <h3>Security and documentation</h3>
+            <h3>AI, data, and systems thinking</h3>
             <p>
-              Trained in secure C/C++, vulnerability identification, memory safety, and
-              fault-tolerant low-level design; authored Nokia internal documentation on
-              Kubernetes frameworks and co-authored an IEEE paper on 6G privacy/security.
+              LLM notebook work, market-basket analysis, OCR translation, and telecom
+              observability show the same pattern: understand the data, design the
+              interface, and make the output useful.
             </p>
           </article>
         </div>
-      </section>
-
-      <section class="timeline band">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">Trajectory</p>
-          <h2>From production engineering to advanced computer science.</h2>
-        </div>
-        <ol>
-          <li data-reveal>
-            <time>2018 - 2022</time>
-            <span>B.E. Information Science & Engineering, BMS Institute of Technology</span>
-          </li>
-          <li data-reveal>
-            <time>2022 - 2025</time>
-            <span>Software Engineer, R&D, Nokia Networks, Bengaluru</span>
-          </li>
-          <li data-reveal>
-            <time>2025 - present</time>
-            <span>M.Sc. Computer Science, Technische Universitat Dresden</span>
-          </li>
-        </ol>
       </section>
 
       <section class="contact" id="contact" data-reveal>
-        <p class="eyebrow">Available for working student roles</p>
-        <h2>Let’s build resilient tools, validation systems, and infrastructure software.</h2>
+        <p class="eyebrow">Available for software engineering roles</p>
+        <h2>Let's build software that solves real problems and survives real use.</h2>
         <div class="contact-links">
           <a href="mailto:amandeep.dev.eu@gmail.com">amandeep.dev.eu@gmail.com</a>
           <a href="https://www.linkedin.com/in/amandesi/">linkedin.com/in/amandesi</a>

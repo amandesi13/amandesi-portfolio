@@ -2,7 +2,7 @@
 
 Personal portfolio website for Amandeep Singh, a software engineer and M.Sc. Computer Science student at TU Dresden.
 
-The site presents my work in distributed systems, 5G telecom architecture, firewall validation, Python automation, CI/CD pipelines, VPP/DPDK data-plane concepts, and current LLM/developer-tooling experiments.
+The site presents my journey as a practical software engineer who turns everyday problems into useful tools, with projects spanning document assistants, technical PDF translation, applied data mining, LLM notebooks, security validation, and production telecom software.
 
 ## Live Site
 
@@ -12,8 +12,9 @@ The site presents my work in distributed systems, 5G telecom architecture, firew
 
 - Apple-inspired responsive portfolio design
 - TUD hero photography and personal profile section
-- Experience highlights from Nokia Networks R&D
-- Project sections for firewall validation, distributed log monitoring, and LLM tooling
+- Experience highlights from Nokia Networks R&D and OPG-layer ownership during Marvell integration
+- Product-led project sections for Auslander Doc Assistant, Technical PDF Translator for Students, Market Basket Analysis, LLM work, and RAN observability
+- Case-study markdown pages for Kaggle projects
 - Built with plain HTML, CSS, and JavaScript for fast static hosting
 
 ## Local Preview
