@@ -1,83 +1,139 @@
-const revealItems = document.querySelectorAll("[data-reveal]");
-const heroImage = document.querySelector(".hero-media img");
+const storyButtons = [...document.querySelectorAll("[data-story]")];
+const storyPanels = [...document.querySelectorAll("[data-panel]")];
+const backdrop = document.querySelector(".story-backdrop");
 const glow = document.querySelector(".cursor-glow");
-const marquee = document.querySelector(".skill-marquee div");
-const detailTriggers = document.querySelectorAll(".hover-card, .info-chip");
+const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
 
-if (marquee) {
-  marquee.innerHTML += marquee.innerHTML;
+let activeStory = null;
+let pinnedStory = null;
+let closeTimer = null;
+let suppressFocusOpen = false;
+
+function getButton(story) {
+  return storyButtons.find((button) => button.dataset.story === story);
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.18 }
-);
+function getPanel(story) {
+  return storyPanels.find((panel) => panel.dataset.panel === story);
+}
 
-revealItems.forEach((item) => observer.observe(item));
+function placePanel(story) {
+  const button = getButton(story);
+  const panel = getPanel(story);
 
-let latestScroll = 0;
-let ticking = false;
+  if (!button || !panel || window.innerWidth <= 860) return;
 
-function updateScrollEffects() {
-  const progress = Math.min(latestScroll / Math.max(window.innerHeight, 1), 1);
-  if (heroImage) {
-    heroImage.style.transform = `scale(${1.04 + progress * 0.06}) translateY(${progress * 18}px)`;
+  panel.style.setProperty("--panel-left", "16px");
+  panel.style.setProperty("--panel-top", "16px");
+
+  const buttonRect = button.getBoundingClientRect();
+  const panelRect = panel.getBoundingClientRect();
+  const gap = 14;
+  const edge = 16;
+
+  let left = buttonRect.left + buttonRect.width / 2 - panelRect.width / 2;
+  left = Math.max(edge, Math.min(left, window.innerWidth - panelRect.width - edge));
+
+  let top = buttonRect.top - panelRect.height - gap;
+  if (top < edge) top = buttonRect.bottom + gap;
+  if (top + panelRect.height > window.innerHeight - edge) {
+    top = Math.max(edge, window.innerHeight - panelRect.height - edge);
   }
-  ticking = false;
+
+  panel.style.setProperty("--panel-left", `${Math.round(left)}px`);
+  panel.style.setProperty("--panel-top", `${Math.round(top)}px`);
 }
 
-window.addEventListener(
-  "scroll",
-  () => {
-    latestScroll = window.scrollY;
-    if (!ticking) {
-      window.requestAnimationFrame(updateScrollEffects);
-      ticking = true;
+function openStory(story, { pin = false } = {}) {
+  window.clearTimeout(closeTimer);
+  activeStory = story;
+  if (pin) pinnedStory = story;
+
+  storyButtons.forEach((button) => {
+    const selected = button.dataset.story === story;
+    button.setAttribute("aria-expanded", String(selected));
+  });
+
+  storyPanels.forEach((panel) => {
+    panel.classList.toggle("is-open", panel.dataset.panel === story);
+  });
+
+  document.body.classList.add("story-open");
+  document.body.classList.toggle("story-pinned", Boolean(pinnedStory));
+  window.requestAnimationFrame(() => placePanel(story));
+}
+
+function closeStories({ force = false } = {}) {
+  if (pinnedStory && !force) return;
+
+  activeStory = null;
+  pinnedStory = null;
+  storyButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
+  storyPanels.forEach((panel) => panel.classList.remove("is-open"));
+  document.body.classList.remove("story-open");
+  document.body.classList.remove("story-pinned");
+}
+
+function scheduleClose() {
+  window.clearTimeout(closeTimer);
+  closeTimer = window.setTimeout(() => {
+    if (!pinnedStory) closeStories();
+  }, 240);
+}
+
+storyButtons.forEach((button) => {
+  const story = button.dataset.story;
+
+  button.addEventListener("click", () => {
+    if (pinnedStory === story) {
+      closeStories({ force: true });
+      return;
     }
-  },
-  { passive: true }
-);
+    openStory(story, { pin: true });
+  });
+
+  button.addEventListener("pointerenter", () => {
+    if (hoverCapable.matches && !pinnedStory) openStory(story);
+  });
+
+  button.addEventListener("pointerleave", () => {
+    if (hoverCapable.matches && !pinnedStory) scheduleClose();
+  });
+
+  button.addEventListener("focus", () => {
+    if (!pinnedStory && !suppressFocusOpen) openStory(story);
+  });
+});
+
+storyPanels.forEach((panel) => {
+  panel.addEventListener("pointerenter", () => window.clearTimeout(closeTimer));
+  panel.addEventListener("pointerleave", () => {
+    if (!pinnedStory) scheduleClose();
+  });
+
+  panel.querySelector(".panel-close")?.addEventListener("click", () => {
+    closeStories({ force: true });
+    suppressFocusOpen = true;
+    getButton(panel.dataset.panel)?.focus();
+    window.requestAnimationFrame(() => {
+      suppressFocusOpen = false;
+    });
+  });
+});
+
+backdrop?.addEventListener("click", () => closeStories({ force: true }));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && activeStory) closeStories({ force: true });
+});
+
+window.addEventListener("resize", () => {
+  if (activeStory) placePanel(activeStory);
+});
 
 window.addEventListener("pointermove", (event) => {
-  if (!glow || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!glow || !hoverCapable.matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   glow.style.opacity = "1";
   glow.style.left = `${event.clientX}px`;
   glow.style.top = `${event.clientY}px`;
 });
-
-function closeDetails(except) {
-  detailTriggers.forEach((item) => {
-    if (item !== except) item.classList.remove("is-open");
-  });
-}
-
-detailTriggers.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    if (event.target.closest("a")) return;
-    event.stopPropagation();
-    const willOpen = !item.classList.contains("is-open");
-    closeDetails(item);
-    item.classList.toggle("is-open", willOpen);
-  });
-
-  item.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      item.click();
-    }
-    if (event.key === "Escape") {
-      item.classList.remove("is-open");
-    }
-  });
-});
-
-document.addEventListener("click", () => closeDetails());
-
-updateScrollEffects();
