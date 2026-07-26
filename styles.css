@@ -319,9 +319,11 @@ h1 span {
 .hover-card:hover .reveal-panel,
 .hover-card:focus-within .reveal-panel,
 .hover-card:focus-visible .reveal-panel,
+.hover-card.is-open .reveal-panel,
 .info-chip:hover .reveal-panel,
 .info-chip:focus-within .reveal-panel,
-.info-chip:focus-visible .reveal-panel {
+.info-chip:focus-visible .reveal-panel,
+.info-chip.is-open .reveal-panel {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0) scale(1);
@@ -417,9 +419,11 @@ h1 span {
   .hover-card:hover .reveal-panel,
   .hover-card:focus-within .reveal-panel,
   .hover-card:focus-visible .reveal-panel,
+  .hover-card.is-open .reveal-panel,
   .info-chip:hover .reveal-panel,
   .info-chip:focus-within .reveal-panel,
-  .info-chip:focus-visible .reveal-panel {
+  .info-chip:focus-visible .reveal-panel,
+  .info-chip.is-open .reveal-panel {
     transform: translate(-50%, 0) scale(1);
   }
 }
@@ -471,9 +475,11 @@ h1 span {
   .hover-card:hover .reveal-panel,
   .hover-card:focus-within .reveal-panel,
   .hover-card:focus-visible .reveal-panel,
+  .hover-card.is-open .reveal-panel,
   .info-chip:hover .reveal-panel,
   .info-chip:focus-within .reveal-panel,
-  .info-chip:focus-visible .reveal-panel {
+  .info-chip:focus-visible .reveal-panel,
+  .info-chip.is-open .reveal-panel {
     transform: translateY(0) scale(1);
   }
 }

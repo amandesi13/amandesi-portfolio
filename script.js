@@ -2,6 +2,7 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const heroImage = document.querySelector(".hero-media img");
 const glow = document.querySelector(".cursor-glow");
 const marquee = document.querySelector(".skill-marquee div");
+const detailTriggers = document.querySelectorAll(".hover-card, .info-chip");
 
 if (marquee) {
   marquee.innerHTML += marquee.innerHTML;
@@ -50,5 +51,33 @@ window.addEventListener("pointermove", (event) => {
   glow.style.left = `${event.clientX}px`;
   glow.style.top = `${event.clientY}px`;
 });
+
+function closeDetails(except) {
+  detailTriggers.forEach((item) => {
+    if (item !== except) item.classList.remove("is-open");
+  });
+}
+
+detailTriggers.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
+    event.stopPropagation();
+    const willOpen = !item.classList.contains("is-open");
+    closeDetails(item);
+    item.classList.toggle("is-open", willOpen);
+  });
+
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      item.click();
+    }
+    if (event.key === "Escape") {
+      item.classList.remove("is-open");
+    }
+  });
+});
+
+document.addEventListener("click", () => closeDetails());
 
 updateScrollEffects();
