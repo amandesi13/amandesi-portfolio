@@ -83,7 +83,9 @@ img {
 }
 
 .top-nav a,
-.project-buttons a {
+.project-buttons a,
+.info-chip,
+.project-panel a {
   min-height: 36px;
   display: inline-flex;
   align-items: center;
@@ -103,7 +105,11 @@ img {
 .top-nav a:hover,
 .top-nav a:focus-visible,
 .project-buttons a:hover,
-.project-buttons a:focus-visible {
+.project-buttons a:focus-visible,
+.info-chip:hover,
+.info-chip:focus-visible,
+.project-panel a:hover,
+.project-panel a:focus-visible {
   background: var(--ink);
   color: var(--bg);
   outline: none;
@@ -227,10 +233,10 @@ h1 span {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(22px, 5vw, 54px);
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
-.stats div {
+.stats > div {
   min-width: 116px;
 }
 
@@ -252,18 +258,110 @@ h1 span {
   text-transform: uppercase;
 }
 
-.project-buttons {
+.hover-card,
+.info-chip {
+  position: relative;
+  border-radius: 14px;
+  outline: none;
+}
+
+.hover-card,
+.info-chip {
+  cursor: help;
+}
+
+.info-buttons,
+.project-panel {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
   max-width: 650px;
 }
 
-.project-buttons a:nth-child(odd) {
+.info-chip {
+  width: auto;
+}
+
+.reveal-panel {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 16px);
+  z-index: 20;
+  width: min(380px, 78vw);
+  padding: 18px;
+  border: 1px solid rgba(248, 245, 239, 0.16);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(255, 107, 43, 0.13), transparent 28%),
+    rgba(22, 21, 20, 0.96);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(0.96);
+  transform-origin: left bottom;
+  transition:
+    opacity 170ms ease,
+    transform 170ms ease;
+}
+
+.hover-card:nth-child(3) .reveal-panel {
+  right: 0;
+  left: auto;
+  transform-origin: right bottom;
+}
+
+.wide-panel,
+.project-panel {
+  width: min(540px, 82vw);
+}
+
+.hover-card:hover .reveal-panel,
+.hover-card:focus-within .reveal-panel,
+.hover-card:focus-visible .reveal-panel,
+.info-chip:hover .reveal-panel,
+.info-chip:focus-within .reveal-panel,
+.info-chip:focus-visible .reveal-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+
+.reveal-panel p {
+  margin: 0;
+  color: rgba(248, 245, 239, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.38;
+}
+
+.reveal-panel p + p {
+  margin-top: 10px;
+}
+
+.project-panel h2 {
+  flex-basis: 100%;
+}
+
+.project-panel a {
+  min-height: 34px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.project-panel a:nth-of-type(odd),
+.info-chip:nth-child(1) {
   border-color: rgba(255, 107, 43, 0.42);
 }
 
-.project-buttons a:nth-child(even) {
+.project-panel a:nth-of-type(even),
+.info-chip:nth-child(2) {
   border-color: rgba(189, 255, 40, 0.32);
 }
 
@@ -304,8 +402,25 @@ h1 span {
   }
 
   .stats,
-  .project-buttons {
+  .info-buttons {
     justify-content: center;
+  }
+
+  .reveal-panel,
+  .hover-card:nth-child(3) .reveal-panel {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 12px) scale(0.96);
+    transform-origin: center bottom;
+  }
+
+  .hover-card:hover .reveal-panel,
+  .hover-card:focus-within .reveal-panel,
+  .hover-card:focus-visible .reveal-panel,
+  .info-chip:hover .reveal-panel,
+  .info-chip:focus-within .reveal-panel,
+  .info-chip:focus-visible .reveal-panel {
+    transform: translate(-50%, 0) scale(1);
   }
 }
 
@@ -334,8 +449,32 @@ h1 span {
     gap: 20px;
   }
 
-  .stats div {
+  .stats > div {
     min-width: 86px;
+  }
+
+  .info-chip {
+    flex: 1 1 auto;
+  }
+
+  .reveal-panel,
+  .hover-card:nth-child(3) .reveal-panel {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+    width: auto;
+    transform: translateY(16px) scale(0.98);
+    transform-origin: center bottom;
+  }
+
+  .hover-card:hover .reveal-panel,
+  .hover-card:focus-within .reveal-panel,
+  .hover-card:focus-visible .reveal-panel,
+  .info-chip:hover .reveal-panel,
+  .info-chip:focus-within .reveal-panel,
+  .info-chip:focus-visible .reveal-panel {
+    transform: translateY(0) scale(1);
   }
 }
 
