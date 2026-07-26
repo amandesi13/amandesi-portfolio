@@ -7,34 +7,32 @@
       name="description"
       content="Amandeep Singh is a software developer in Dresden working across Python, Linux, telecom systems, automation, and quality engineering."
     />
-    <meta name="theme-color" content="#0c0c0c" />
+    <meta name="theme-color" content="#0a0a09" />
     <title>Amandeep Singh | Software Developer</title>
     <link rel="preload" as="image" href="assets/amandeep-singh-portrait.png" />
-    <link rel="stylesheet" href="styles.css?v=21" />
+    <link rel="stylesheet" href="styles.css?v=30" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-
-    <main class="stage" aria-labelledby="page-title">
-      <aside class="profile-card" aria-label="Amandeep Singh profile">
-        <div class="profile-accent" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-
-        <div class="portrait-frame">
+    <main class="portfolio-shell" aria-labelledby="page-title">
+      <aside class="identity-panel" aria-label="Amandeep Singh profile">
+        <div class="portrait">
           <img src="assets/amandeep-singh-portrait.png" alt="Amandeep Singh" />
-          <span class="availability"><i></i> Open to working-student roles</span>
+          <span class="availability"><i aria-hidden="true"></i>Open to working-student roles</span>
         </div>
 
-        <div class="identity">
-          <p>Amandeep Singh</p>
-          <span>Dresden, Germany</span>
+        <div class="identity-copy">
+          <p class="identity-kicker">Based in Dresden, Germany</p>
+          <h2>Amandeep Singh</h2>
+          <p class="identity-summary">
+            I build dependable software across automation, telecom, AI-assisted
+            tools, and data workflows.
+          </p>
         </div>
 
-        <p class="profile-direction">
-          Seeking Python, Linux, automation, and telecom software roles where
-          dependable engineering matters.
-        </p>
+        <div class="role-search">
+          <span>Currently exploring</span>
+          <p>Python, Linux, systems, automation, and telecom software roles.</p>
+        </div>
 
         <div class="profile-tags" aria-label="Core focus">
           <span>Python</span>
@@ -43,85 +41,198 @@
         </div>
       </aside>
 
-      <section class="hero-copy">
-        <div class="role-strip" aria-label="Profile signals">
+      <section class="workspace">
+        <div class="signal-line" aria-label="Profile signals">
           <span>TU Dresden</span>
           <span>ComNets</span>
           <span>Ex-Nokia R&amp;D</span>
           <span>Software Developer</span>
         </div>
 
-        <h1 id="page-title">
-          SOFTWARE
-          <span>DEVELOPER</span>
-        </h1>
+        <header class="hero">
+          <h1 id="page-title">SOFTWARE <span>DEVELOPER</span></h1>
+          <p>I turn unclear workflows into small, reliable software that people can actually use.</p>
+        </header>
 
-        <div class="intro-row">
-          <p class="lede">
-            I turn unclear workflows into small, reliable software that people
-            can actually use.
-          </p>
-          <p class="story-hint">
-            <i aria-hidden="true"></i>
-            Hover or tap a tile
-          </p>
-        </div>
+        <section class="story-workbench" aria-label="Explore Amandeep's journey">
+          <div class="story-navigation">
+            <div class="navigation-heading">
+              <div>
+                <span>Selected chapters</span>
+                <strong>Explore the trajectory</strong>
+              </div>
+              <p><i aria-hidden="true"></i>Hover to preview. Tap to keep.</p>
+            </div>
 
-        <div class="story-grid" aria-label="Explore Amandeep's journey">
-          <button class="story-tile metric-tile" type="button" data-story="nokia" aria-controls="story-nokia" aria-expanded="false">
-            <span class="tile-index">01 / Experience</span>
-            <strong>3+</strong>
-            <span class="tile-label">Years in R&amp;D</span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
+            <div class="story-grid" role="tablist" aria-label="Portfolio stories">
+              <button class="story-tab" type="button" role="tab" data-story="nokia" aria-controls="story-nokia" aria-selected="false">
+                <span class="tab-index">01 / Experience</span>
+                <strong>3+ years</strong>
+                <span>Telecom R&amp;D</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
 
-          <button class="story-tile metric-tile" type="button" data-story="projects" aria-controls="story-projects" aria-expanded="false">
-            <span class="tile-index">02 / Delivery</span>
-            <strong>20+</strong>
-            <span class="tile-label">Projects &amp; production deliveries</span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
+              <button class="story-tab" type="button" role="tab" data-story="projects" aria-controls="story-projects" aria-selected="false">
+                <span class="tab-index">02 / Delivery</span>
+                <strong>20+ builds</strong>
+                <span>Projects &amp; production deliveries</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
 
-          <button class="story-tile text-tile" type="button" data-story="studies" aria-controls="story-studies" aria-expanded="false">
-            <span class="tile-index">03 / Education</span>
-            <strong>Postgrad</strong>
-            <span class="tile-label">Journey · pursuing Sem 2</span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
+              <button class="story-tab" type="button" role="tab" data-story="studies" aria-controls="story-studies" aria-selected="false">
+                <span class="tab-index">03 / Education</span>
+                <strong>Postgrad journey</strong>
+                <span>Pursuing semester 2</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
 
-          <button class="story-tile text-tile" type="button" data-story="comnets" aria-controls="story-comnets" aria-expanded="false">
-            <span class="tile-index">04 / Current role</span>
-            <strong>Student Research Assistant</strong>
-            <span class="tile-label">O-RAN &amp; xApp deployment</span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
-        </div>
+              <button class="story-tab role-tab" type="button" role="tab" data-story="comnets" aria-controls="story-comnets" aria-selected="true">
+                <span class="tab-index">04 / Current role</span>
+                <strong>Student Research Assistant</strong>
+                <span>O-RAN &amp; xApp deployment</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
 
-        <div class="secondary-stories" aria-label="Skills and interests">
-          <button class="story-tile secondary-tile skills-tile" type="button" data-story="skills" aria-controls="story-skills" aria-expanded="false">
-            <span class="secondary-icon skills-icon" aria-hidden="true">
-              <i></i><i></i><i></i><i></i>
-            </span>
-            <span>
-              <small>Technical map</small>
-              <strong>Skills &amp; systems</strong>
-            </span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
+              <button class="story-tab" type="button" role="tab" data-story="skills" aria-controls="story-skills" aria-selected="false">
+                <span class="tab-index">05 / Toolkit</span>
+                <strong>Systems</strong>
+                <span>Build, operate, verify</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
 
-          <button class="story-tile secondary-tile life-tile" type="button" data-story="life" aria-controls="story-life" aria-expanded="false">
-            <span class="secondary-icon life-icon" aria-hidden="true"></span>
-            <span>
-              <small>Beyond the terminal</small>
-              <strong>Outside work</strong>
-            </span>
-            <i class="tile-arrow" aria-hidden="true"></i>
-          </button>
-        </div>
+              <button class="story-tab" type="button" role="tab" data-story="life" aria-controls="story-life" aria-selected="false">
+                <span class="tab-index">06 / Beyond work</span>
+                <strong>Curiosity</strong>
+                <span>Sport, stories, collections</span>
+                <i class="tab-arrow" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="story-stage" aria-live="polite">
+            <article class="story-panel" id="story-nokia" role="tabpanel" data-panel="nokia" aria-hidden="true">
+              <div class="story-media">
+                <img src="assets/hover-nokia.jpg" alt="Amandeep outside a Nokia office" />
+                <span>Nokia Mobile Networks</span>
+              </div>
+              <div class="story-copy">
+                <p class="story-kicker">Three years in telecom R&amp;D</p>
+                <h2>From fault traces to production confidence.</h2>
+                <p>
+                  C/C++, Python, Linux, validation pipelines, production debugging,
+                  and OPG-layer ownership shaped how I work: trace the full system,
+                  automate repeated checks, and protect quality before release.
+                </p>
+                <div class="story-facts">
+                  <span>Production debugging</span>
+                  <span>Validation automation</span>
+                  <span>System ownership</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="story-panel" id="story-projects" role="tabpanel" data-panel="projects" aria-hidden="true">
+              <div class="story-copy story-copy-wide">
+                <p class="story-kicker">20+ projects &amp; production deliveries</p>
+                <h2>Built across AI, data, telecom, automation, and quality.</h2>
+                <p>
+                  The public projects below are a few anchors. The wider catalogue
+                  spans academic prototypes, R&amp;D tooling, validation systems,
+                  and production workflows.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/amandesi13/auslander-doc-assistant">Document assistant <i aria-hidden="true"></i></a>
+                  <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">RAN metrics xApp <i aria-hidden="true"></i></a>
+                  <a href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">Firewall validator <i aria-hidden="true"></i></a>
+                  <a class="all-projects" href="https://github.com/amandesi13?tab=repositories">View all repositories <i aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="story-panel" id="story-studies" role="tabpanel" data-panel="studies" aria-hidden="true">
+              <div class="story-media tud-media">
+                <img src="assets/hover-tud.jpg" alt="Amandeep at TU Dresden" />
+                <span>Bengaluru to Dresden</span>
+              </div>
+              <div class="story-copy">
+                <p class="story-kicker">Postgraduate journey</p>
+                <h2>Building on engineering with deeper systems thinking.</h2>
+                <p>
+                  After a B.E. in Information Science and Engineering at BMSIT, I
+                  moved to TU Dresden for an M.Sc. in Computer Science. Semester two
+                  covers Infovis, Security &amp; Cryptography, Software Management
+                  &amp; QA, and Future-Proof Software Systems.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-panel is-active" id="story-comnets" role="tabpanel" data-panel="comnets" aria-hidden="false">
+              <div class="comnets-mark">
+                <img src="assets/comnets-logo-negative.png" alt="ComNets" />
+                <span>Student Research Assistant</span>
+              </div>
+              <div class="story-copy">
+                <p class="story-kicker">Current role at TU Dresden</p>
+                <h2>Making O-RAN and xApp deployment observable.</h2>
+                <p>
+                  I work on xApp development and deployment, RAN metrics,
+                  Linux/Python workflows, and telecom observability: collecting
+                  the right signals and turning system behaviour into evidence.
+                </p>
+                <div class="story-facts">
+                  <span>O-RAN</span>
+                  <span>Python &amp; Linux</span>
+                  <span>Metrics pipelines</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="story-panel" id="story-skills" role="tabpanel" data-panel="skills" aria-hidden="true">
+              <div class="systems-map" aria-hidden="true">
+                <span class="map-label build-label">BUILD</span>
+                <span class="map-label operate-label">OPERATE</span>
+                <span class="map-label verify-label">VERIFY</span>
+                <i class="map-line line-one"></i>
+                <i class="map-line line-two"></i>
+                <b>Python</b>
+                <b>C/C++</b>
+                <b>Linux</b>
+                <b>Docker</b>
+                <b>CI/CD</b>
+                <b>pytest</b>
+              </div>
+              <div class="story-copy">
+                <p class="story-kicker">A systems-first toolkit</p>
+                <h2>Tools matter. Connecting them is the skill.</h2>
+                <p>
+                  Python, C/C++, Bash, FastAPI, REST, Linux, Git, Docker,
+                  Kubernetes, CI/CD, pytest, Prometheus, Grafana, OCR, and LLM
+                  workflows.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-panel" id="story-life" role="tabpanel" data-panel="life" aria-hidden="true">
+              <div class="story-media life-media">
+                <img src="assets/outside-work-dresden.jpeg" alt="Amandeep by the Elbe in Dresden" />
+                <span>Beyond the terminal</span>
+              </div>
+              <div class="story-copy">
+                <p class="story-kicker">Curiosity outside work</p>
+                <h2>Basketball, technology, die-casts, and philately.</h2>
+                <p>
+                  Basketball keeps me moving. Technology keeps me curious.
+                  Die-cast models and stamps keep me close to design, history,
+                  and the stories hidden inside small objects.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
       </section>
 
       <footer class="contact-rail" aria-label="Contact details">
-        <span class="rail-label">Let’s build something useful.</span>
+        <span>Let us build something useful.</span>
         <nav aria-label="Contact links">
           <a href="https://github.com/amandesi13">GitHub</a>
           <a href="https://www.linkedin.com/in/amandesi/">LinkedIn</a>
@@ -131,112 +242,6 @@
       </footer>
     </main>
 
-    <div class="story-layer" aria-live="polite">
-      <button class="story-backdrop" type="button" aria-label="Close story"></button>
-
-      <article class="reveal-panel photo-panel" id="story-nokia" data-panel="nokia" role="dialog" aria-modal="true" aria-labelledby="nokia-title">
-        <button class="panel-close" type="button" aria-label="Close Nokia story"></button>
-        <div class="panel-photo">
-          <img src="assets/hover-nokia.jpg" alt="Amandeep outside a Nokia office" />
-        </div>
-        <p class="panel-kicker">Three years in telecom R&amp;D</p>
-        <h2 id="nokia-title">From fault traces to production confidence.</h2>
-        <p>
-          At Nokia Mobile Networks, I worked across C/C++, Python, Linux,
-          validation pipelines, production debugging, and OPG-layer ownership.
-          It taught me to trace the whole system, automate repeated checks, and
-          protect quality before release.
-        </p>
-      </article>
-
-      <article class="reveal-panel project-panel" id="story-projects" data-panel="projects" role="dialog" aria-modal="true" aria-labelledby="projects-title">
-        <button class="panel-close" type="button" aria-label="Close projects story"></button>
-        <p class="panel-kicker">20+ projects &amp; production deliveries</p>
-        <h2 id="projects-title">A broad portfolio, with a few public anchors.</h2>
-        <div class="delivery-map" aria-hidden="true">
-          <span>Automation</span>
-          <span>AI &amp; data</span>
-          <span>Telecom</span>
-          <span>Quality</span>
-        </div>
-        <p>
-          My work spans academic prototypes, R&amp;D tooling, production
-          validation, data workflows, and AI-assisted systems. These are a few
-          representative builds; the wider catalogue lives on GitHub.
-        </p>
-        <div class="project-links">
-          <a href="https://github.com/amandesi13/auslander-doc-assistant">Doc Assistant <i></i></a>
-          <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">RAN Metrics xApp <i></i></a>
-          <a href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">Firewall Validator <i></i></a>
-          <a class="all-projects" href="https://github.com/amandesi13?tab=repositories">Explore all repositories <i></i></a>
-        </div>
-      </article>
-
-      <article class="reveal-panel photo-panel" id="story-studies" data-panel="studies" role="dialog" aria-modal="true" aria-labelledby="studies-title">
-        <button class="panel-close" type="button" aria-label="Close education story"></button>
-        <div class="panel-photo panel-photo-tud">
-          <img src="assets/hover-tud.jpg" alt="Amandeep at TU Dresden" />
-        </div>
-        <p class="panel-kicker">Bengaluru → Dresden</p>
-        <h2 id="studies-title">A postgrad journey built around better systems.</h2>
-        <p>
-          After a B.E. in Information Science and Engineering at BMSIT, I moved
-          to TU Dresden for an M.Sc. in Computer Science. In semester two, I am
-          pursuing Information Visualization, Security &amp; Cryptography,
-          Software Management &amp; QA, and Future-Proof Software Systems.
-        </p>
-      </article>
-
-      <article class="reveal-panel comnets-story" id="story-comnets" data-panel="comnets" role="dialog" aria-modal="true" aria-labelledby="comnets-title">
-        <button class="panel-close" type="button" aria-label="Close ComNets story"></button>
-        <div class="comnets-lockup">
-          <img src="assets/comnets-logo-negative.png" alt="ComNets" />
-          <span>Student Research Assistant</span>
-        </div>
-        <p class="panel-kicker">Current role · TU Dresden</p>
-        <h2 id="comnets-title">O-RAN and xApp deployment, made observable.</h2>
-        <p>
-          I work on O-RAN xApp development and deployment, RAN metrics,
-          Linux/Python workflows, and telecom observability. The goal is
-          practical: collect the right signals, make execution repeatable, and
-          turn system behaviour into evidence.
-        </p>
-      </article>
-
-      <article class="reveal-panel skills-story" id="story-skills" data-panel="skills" role="dialog" aria-modal="true" aria-labelledby="skills-title">
-        <button class="panel-close" type="button" aria-label="Close skills story"></button>
-        <div class="systems-map" aria-hidden="true">
-          <div class="map-core">BUILD</div>
-          <span class="map-node node-python">Python</span>
-          <span class="map-node node-linux">Linux</span>
-          <span class="map-node node-telecom">O-RAN</span>
-          <span class="map-node node-quality">QA</span>
-          <span class="map-node node-cloud">CI/CD</span>
-        </div>
-        <p class="panel-kicker">A systems-first toolkit</p>
-        <h2 id="skills-title">Tools are useful. Connecting them is the skill.</h2>
-        <div class="skill-groups">
-          <p><strong>Build</strong> Python, C/C++, Bash, FastAPI, REST, OCR, LLM workflows</p>
-          <p><strong>Operate</strong> Linux, Git, Docker, Kubernetes, CI/CD</p>
-          <p><strong>Verify</strong> pytest, debugging, validation, Prometheus, Grafana</p>
-        </div>
-      </article>
-
-      <article class="reveal-panel photo-panel life-story" id="story-life" data-panel="life" role="dialog" aria-modal="true" aria-labelledby="life-title">
-        <button class="panel-close" type="button" aria-label="Close outside-work story"></button>
-        <div class="panel-photo panel-photo-life">
-          <img src="assets/outside-work-dresden.jpeg" alt="Amandeep by the Elbe in Dresden" />
-        </div>
-        <p class="panel-kicker">Beyond the terminal</p>
-        <h2 id="life-title">Curious about systems, stories, and moving parts.</h2>
-        <p>
-          Basketball keeps me moving; technology keeps me curious. I collect
-          die-cast models and stamps because tiny objects can carry surprisingly
-          large stories.
-        </p>
-      </article>
-    </div>
-
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=12"></script>
   </body>
 </html>
