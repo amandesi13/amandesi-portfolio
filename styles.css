@@ -376,7 +376,7 @@ h1 span {
 
 .panel-photo {
   width: 100%;
-  height: 132px;
+  height: 150px;
   margin: 0 0 14px;
   border: 1px solid rgba(248, 245, 239, 0.1);
   border-radius: 14px;
@@ -388,7 +388,7 @@ h1 span {
 .project-panel .panel-photo,
 .wide-panel .panel-photo {
   flex-basis: 100%;
-  height: 150px;
+  height: 170px;
 }
 
 .reveal-panel p {
