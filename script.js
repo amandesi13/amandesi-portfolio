@@ -1,65 +1,60 @@
-const storyTabs = [...document.querySelectorAll("[data-story]")];
-const storyPanels = [...document.querySelectorAll("[data-panel]")];
+const chapters = [...document.querySelectorAll(".chapter")];
 const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
 
-let selectedStory = "comnets";
+let selectedChapter = "comnets";
 let resetTimer = null;
 
-function showStory(story) {
-  storyTabs.forEach((tab) => {
-    tab.setAttribute("aria-selected", String(tab.dataset.story === story));
-  });
+function activateChapter(name) {
+  chapters.forEach((chapter) => {
+    const active = chapter.dataset.chapter === name;
+    const trigger = chapter.querySelector(".chapter-trigger");
+    const panel = chapter.querySelector(".chapter-content");
 
-  storyPanels.forEach((panel) => {
-    const active = panel.dataset.panel === story;
-    panel.classList.toggle("is-active", active);
+    chapter.classList.toggle("is-active", active);
+    trigger.setAttribute("aria-selected", String(active));
     panel.setAttribute("aria-hidden", String(!active));
   });
 }
 
-function returnToSelection() {
-  window.clearTimeout(resetTimer);
-  resetTimer = window.setTimeout(() => showStory(selectedStory), 120);
-}
+chapters.forEach((chapter, index) => {
+  const trigger = chapter.querySelector(".chapter-trigger");
+  const name = chapter.dataset.chapter;
 
-storyTabs.forEach((tab, index) => {
-  const story = tab.dataset.story;
-
-  tab.addEventListener("pointerenter", () => {
-    if (hoverCapable.matches) {
-      window.clearTimeout(resetTimer);
-      showStory(story);
-    }
-  });
-
-  tab.addEventListener("pointerleave", () => {
-    if (hoverCapable.matches) returnToSelection();
-  });
-
-  tab.addEventListener("focus", () => {
+  chapter.addEventListener("pointerenter", () => {
+    if (!hoverCapable.matches) return;
     window.clearTimeout(resetTimer);
-    showStory(story);
+    activateChapter(name);
   });
 
-  tab.addEventListener("click", () => {
-    selectedStory = story;
-    showStory(story);
+  trigger.addEventListener("click", () => {
+    selectedChapter = name;
+    activateChapter(name);
   });
 
-  tab.addEventListener("keydown", (event) => {
-    const columns = window.innerWidth <= 560 ? 2 : 2;
-    let nextIndex = index;
+  trigger.addEventListener("focus", () => {
+    window.clearTimeout(resetTimer);
+    activateChapter(name);
+  });
 
-    if (event.key === "ArrowRight") nextIndex = Math.min(index + 1, storyTabs.length - 1);
-    if (event.key === "ArrowLeft") nextIndex = Math.max(index - 1, 0);
-    if (event.key === "ArrowDown") nextIndex = Math.min(index + columns, storyTabs.length - 1);
-    if (event.key === "ArrowUp") nextIndex = Math.max(index - columns, 0);
-
-    if (nextIndex !== index) {
+  trigger.addEventListener("keydown", (event) => {
+    let next = index;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = Math.min(index + 1, chapters.length - 1);
+    }
+    if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = Math.max(index - 1, 0);
+    }
+    if (next !== index) {
       event.preventDefault();
-      storyTabs[nextIndex].focus();
+      chapters[next].querySelector(".chapter-trigger").focus();
     }
   });
 });
 
-showStory(selectedStory);
+document.querySelector(".chapter-rail").addEventListener("pointerleave", () => {
+  if (!hoverCapable.matches) return;
+  window.clearTimeout(resetTimer);
+  resetTimer = window.setTimeout(() => activateChapter(selectedChapter), 140);
+});
+
+activateChapter(selectedChapter);
