@@ -58,13 +58,13 @@ img {
 .stage {
   position: relative;
   width: min(1180px, calc(100vw - 48px));
-  height: min(760px, calc(100svh - 48px));
-  min-height: 650px;
+  min-height: min(760px, calc(100svh - 48px));
   display: grid;
   grid-template-columns: 345px minmax(0, 1fr);
   gap: clamp(44px, 7vw, 96px);
   align-items: center;
   margin: 24px auto;
+  padding-bottom: 72px;
 }
 
 .contact-rail {
@@ -212,7 +212,7 @@ img {
 }
 
 .hero-copy {
-  padding-top: 52px;
+  padding-top: 18px;
 }
 
 .role-strip {
@@ -271,7 +271,7 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(4, minmax(102px, 1fr));
   gap: clamp(12px, 2.2vw, 24px);
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   max-width: 760px;
 }
 
@@ -282,7 +282,7 @@ h1 span {
 .stats strong {
   display: block;
   color: var(--ink);
-  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
   font-weight: 930;
   line-height: 0.9;
 }
@@ -306,8 +306,10 @@ h1 span {
 }
 
 .hover-card {
-  padding: 10px 12px;
+  min-height: 116px;
+  padding: 14px 14px;
   border: 1px solid rgba(248, 245, 239, 0.09);
+  border-radius: 16px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
     rgba(255, 255, 255, 0.018);
@@ -352,14 +354,23 @@ h1 span {
   max-width: 650px;
 }
 
+.info-buttons {
+  gap: 14px;
+}
+
 .info-chip {
   width: auto;
-  min-width: 145px;
-  min-height: 58px;
+  min-width: 190px;
+  min-height: 76px;
   flex-direction: column;
   align-items: flex-start;
-  border-radius: 16px;
-  padding: 10px 14px;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 13px 48px 13px 16px;
+  background:
+    radial-gradient(circle at 90% 18%, rgba(255, 107, 43, 0.18), transparent 24%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.018));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
   text-align: left;
 }
 
@@ -373,8 +384,31 @@ h1 span {
 .info-chip strong {
   margin-top: 5px;
   color: rgba(248, 245, 239, 0.88);
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   line-height: 1;
+}
+
+.info-chip b {
+  position: absolute;
+  right: 13px;
+  bottom: 13px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(248, 245, 239, 0.18);
+  border-radius: 50%;
+  color: transparent;
+  font-size: 0;
+}
+
+.info-chip b::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(248, 245, 239, 0.78);
+  border-right: 2px solid rgba(248, 245, 239, 0.78);
+  transform: rotate(45deg);
 }
 
 .reveal-panel {
@@ -453,6 +487,33 @@ h1 span {
   flex-basis: 100%;
 }
 
+.comnets-panel {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  margin: 0 0 14px;
+  border: 1px solid rgba(132, 207, 237, 0.22);
+  border-radius: 14px;
+  padding: 26px;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(226, 0, 116, 0.18), transparent 28%),
+    linear-gradient(135deg, #00305d, #102a3a 54%, #11100f);
+}
+
+.comnets-panel img {
+  width: min(260px, 82%);
+  height: auto;
+}
+
+.comnets-panel span {
+  display: block;
+  margin-top: 18px;
+  color: rgba(248, 245, 239, 0.72);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
 .reveal-panel p {
   margin: 0;
   color: rgba(248, 245, 239, 0.68);
@@ -511,7 +572,7 @@ h1 span {
     grid-template-columns: 1fr;
     gap: 26px;
     align-content: center;
-    padding: 30px 0 96px;
+    padding: 30px 0 140px;
   }
 
   .profile-card {
