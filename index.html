@@ -10,18 +10,12 @@
     <meta name="theme-color" content="#11100f" />
     <title>Amandeep Singh - Software Developer</title>
     <link rel="preload" as="image" href="assets/amandeep-singh-portrait.png" />
-    <link rel="stylesheet" href="styles.css?v=18" />
+    <link rel="stylesheet" href="styles.css?v=19" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <main class="stage" aria-labelledby="page-title">
-      <nav class="top-nav" aria-label="Primary links">
-        <a href="https://github.com/amandesi13">GitHub</a>
-        <a href="https://www.linkedin.com/in/amandesi/">LinkedIn</a>
-        <a href="mailto:amandeep.dev.eu@gmail.com">Email</a>
-      </nav>
-
       <section class="profile-card" aria-label="Profile">
         <div class="portrait-frame">
           <img src="assets/amandeep-singh-portrait.png" alt="Amandeep Singh" />
@@ -37,7 +31,12 @@
       </section>
 
       <section class="hero-copy">
-        <p class="eyebrow">TU Dresden / Ex-Nokia R&amp;D / Software Developer</p>
+        <div class="role-strip" aria-label="Profile signals">
+          <span>TU Dresden</span>
+          <span>ComNets</span>
+          <span>Ex-Nokia R&amp;D</span>
+          <span>Software Developer</span>
+        </div>
         <h1 id="page-title">
           SOFTWARE<br />
           <span>DEVELOPER</span>
@@ -46,7 +45,7 @@
           I turn unclear workflows into small, reliable software that people can
           actually use.
         </p>
-        <p class="hover-hint">Hover or tap the numbers to open the story.</p>
+        <p class="hover-hint">Hover or tap a tile to open the story.</p>
 
         <div class="stats" aria-label="Profile highlights">
           <div class="hover-card" tabindex="0" role="button" aria-label="Show Nokia R and D trajectory">
@@ -66,11 +65,17 @@
             </article>
           </div>
           <div class="hover-card" tabindex="0" role="button" aria-label="Show project links">
-            <strong>6</strong>
-            <span>projects</span>
+            <strong>20+</strong>
+            <span>projects &amp; deliveries</span>
             <article class="reveal-panel project-panel">
               <img class="panel-photo" src="assets/hover-desk.jpg" alt="Desk setup with technology and die-cast collection" />
-              <h2>Project links</h2>
+              <h2>Projects and production deliveries</h2>
+              <p>
+                Built 20+ academic, R&amp;D, automation, AI, data, telecom, and quality
+                engineering deliverables. The links below are selected public anchors;
+                the wider story lives across GitHub, Kaggle, coursework, and production
+                validation work.
+              </p>
               <a href="https://github.com/amandesi13/auslander-doc-assistant">Auslander Doc Assistant</a>
               <a href="https://github.com/amandesi13/pdf-de2en-ocr-lens">Technical PDF Translator</a>
               <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">OAI RAN Metrics xApp Lab</a>
@@ -80,18 +85,36 @@
             </article>
           </div>
           <div class="hover-card" tabindex="0" role="button" aria-label="Show studies trajectory">
-            <strong>M.Sc.</strong>
-            <span>computer science</span>
+            <strong>S2</strong>
+            <span>postgrad journey</span>
             <article class="reveal-panel">
               <img class="panel-photo" src="assets/hover-tud.jpg" alt="Amandeep at the TU Dresden sign" />
-              <h2>Studies trajectory</h2>
+              <h2>Postgrad journey so far</h2>
               <p>
                 B.E. Information Science and Engineering at BMSIT Bengaluru, where I
                 started with applied software and data projects.
               </p>
               <p>
-                Now pursuing M.Sc. Computer Science at TU Dresden, with focus across
-                distributed systems, cloud security, data engineering, LLMs, and quality.
+                Now in the second semester of M.Sc. Computer Science at TU Dresden,
+                currently pursuing Information Visualization, Security and Cryptography,
+                Software Management and QA, and Future Proof Software Systems.
+              </p>
+            </article>
+          </div>
+          <div class="hover-card" tabindex="0" role="button" aria-label="Show current ComNets role">
+            <strong>xApp</strong>
+            <span>current role</span>
+            <article class="reveal-panel">
+              <img class="panel-photo" src="assets/hover-skills.jpg" alt="Abstract software skills diagram" />
+              <h2>Current role at ComNets</h2>
+              <p>
+                Student Research Assistant working on xApp development, RAN metrics,
+                Linux/Python workflows, and practical validation around O-RAN style
+                observability.
+              </p>
+              <p>
+                The role connects telecom systems with automation: collect the signal,
+                make the workflow repeatable, and turn system behavior into evidence.
               </p>
             </article>
           </div>
@@ -99,7 +122,8 @@
 
         <div class="info-buttons" aria-label="More profile details">
           <div class="info-chip" tabindex="0" role="button" aria-label="Show skills">
-            Skills
+            <span>Stack</span>
+            <strong>Skills map</strong>
             <article class="reveal-panel wide-panel">
               <img class="panel-photo" src="assets/hover-skills.jpg" alt="Abstract software skills diagram" />
               <h2>Skills</h2>
@@ -111,7 +135,8 @@
             </article>
           </div>
           <div class="info-chip" tabindex="0" role="button" aria-label="Show hobbies">
-            Hobbies
+            <span>Life</span>
+            <strong>Outside work</strong>
             <article class="reveal-panel wide-panel">
               <img class="panel-photo" src="assets/hover-lifestyle.jpg" alt="Amandeep in a casual evening portrait" />
               <h2>Outside work</h2>
@@ -123,8 +148,16 @@
           </div>
         </div>
       </section>
+
+      <footer class="contact-rail" aria-label="Contact details">
+        <a href="https://github.com/amandesi13">GitHub</a>
+        <a href="https://www.linkedin.com/in/amandesi/">LinkedIn</a>
+        <a href="mailto:amandeep.dev.eu@gmail.com">amandeep.dev.eu@gmail.com</a>
+        <span>Dresden, Germany</span>
+        <strong>Humility and humanity above all!</strong>
+      </footer>
     </main>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>
