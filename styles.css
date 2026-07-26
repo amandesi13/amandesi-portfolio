@@ -223,10 +223,22 @@ h1 span {
 
 .lede {
   max-width: 580px;
-  margin: 30px 0 42px;
+  margin: 30px 0 14px;
   color: rgba(248, 245, 239, 0.58);
   font-size: clamp(1.1rem, 2vw, 1.34rem);
   line-height: 1.35;
+}
+
+.hover-hint {
+  width: fit-content;
+  margin: 0 0 34px;
+  border: 1px solid rgba(248, 245, 239, 0.12);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: rgba(248, 245, 239, 0.52);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.8rem;
+  font-weight: 780;
 }
 
 .stats {
@@ -263,11 +275,38 @@ h1 span {
   position: relative;
   border-radius: 14px;
   outline: none;
+  animation: hover-nudge 4.8s ease-in-out infinite;
 }
 
 .hover-card,
 .info-chip {
   cursor: help;
+}
+
+.hover-card:nth-child(2) {
+  animation-delay: 0.34s;
+}
+
+.hover-card:nth-child(3) {
+  animation-delay: 0.68s;
+}
+
+.info-chip:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.hover-card strong,
+.info-chip {
+  transition:
+    transform 170ms ease,
+    color 170ms ease;
+}
+
+.hover-card:hover strong,
+.hover-card:focus-visible strong,
+.hover-card.is-open strong {
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
 .info-buttons,
@@ -287,7 +326,7 @@ h1 span {
   left: 0;
   bottom: calc(100% + 16px);
   z-index: 20;
-  width: min(380px, 78vw);
+  width: min(420px, 80vw);
   padding: 18px;
   border: 1px solid rgba(248, 245, 239, 0.16);
   border-radius: 18px;
@@ -313,7 +352,7 @@ h1 span {
 
 .wide-panel,
 .project-panel {
-  width: min(540px, 82vw);
+  width: min(560px, 84vw);
 }
 
 .hover-card:hover .reveal-panel,
@@ -333,6 +372,23 @@ h1 span {
   margin: 0 0 10px;
   font-size: 1.15rem;
   line-height: 1.1;
+}
+
+.panel-photo {
+  width: 100%;
+  height: 132px;
+  margin: 0 0 14px;
+  border: 1px solid rgba(248, 245, 239, 0.1);
+  border-radius: 14px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.project-panel .panel-photo,
+.wide-panel .panel-photo {
+  flex-basis: 100%;
+  height: 150px;
 }
 
 .reveal-panel p {
@@ -365,6 +421,17 @@ h1 span {
 .project-panel a:nth-of-type(even),
 .info-chip:nth-child(2) {
   border-color: rgba(189, 255, 40, 0.32);
+}
+
+@keyframes hover-nudge {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 107, 43, 0));
+  }
+
+  45% {
+    filter: drop-shadow(0 0 14px rgba(255, 107, 43, 0.16));
+  }
 }
 
 @media (max-width: 930px) {
@@ -400,6 +467,10 @@ h1 span {
   }
 
   .lede {
+    margin-inline: auto;
+  }
+
+  .hover-hint {
     margin-inline: auto;
   }
 
@@ -481,6 +552,10 @@ h1 span {
   .info-chip:focus-visible .reveal-panel,
   .info-chip.is-open .reveal-panel {
     transform: translateY(0) scale(1);
+  }
+
+  .panel-photo {
+    height: 120px;
   }
 }
 
