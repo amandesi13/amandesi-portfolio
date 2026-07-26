@@ -1,10 +1,13 @@
 const chapters = [...document.querySelectorAll(".chapter")];
+const chapterRail = document.querySelector(".chapter-rail");
 const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 let selectedChapter = "comnets";
 let resetTimer = null;
 
 function activateChapter(name) {
+  chapterRail.classList.toggle("has-active", Boolean(name));
+
   chapters.forEach((chapter) => {
     const active = chapter.dataset.chapter === name;
     const trigger = chapter.querySelector(".chapter-trigger");
@@ -18,6 +21,7 @@ function activateChapter(name) {
 
 chapters.forEach((chapter, index) => {
   const trigger = chapter.querySelector(".chapter-trigger");
+  const closeButton = chapter.querySelector(".chapter-close");
   const name = chapter.dataset.chapter;
 
   chapter.addEventListener("pointerenter", () => {
@@ -49,12 +53,26 @@ chapters.forEach((chapter, index) => {
       chapters[next].querySelector(".chapter-trigger").focus();
     }
   });
+
+  closeButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    selectedChapter = null;
+    activateChapter(null);
+    chapterRail.focus({ preventScroll: true });
+  });
 });
 
-document.querySelector(".chapter-rail").addEventListener("pointerleave", () => {
+chapterRail.addEventListener("pointerleave", () => {
   if (!hoverCapable.matches) return;
   window.clearTimeout(resetTimer);
   resetTimer = window.setTimeout(() => activateChapter(selectedChapter), 140);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  selectedChapter = null;
+  activateChapter(null);
+  chapterRail.focus({ preventScroll: true });
 });
 
 activateChapter(selectedChapter);

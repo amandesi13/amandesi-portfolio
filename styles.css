@@ -297,6 +297,10 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+.chapter-rail:focus {
+  outline: none;
+}
+
 .chapter {
   position: relative;
   min-width: 82px;
@@ -403,6 +407,48 @@ img {
     transform 220ms ease 80ms;
 }
 
+.chapter-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line-strong);
+  border-radius: 3px;
+  background: rgba(9, 9, 9, 0.72);
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.chapter-close::before,
+.chapter-close::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 7px;
+  width: 14px;
+  height: 1px;
+  background: rgba(243, 240, 232, 0.78);
+}
+
+.chapter-close::before {
+  transform: rotate(45deg);
+}
+
+.chapter-close::after {
+  transform: rotate(-45deg);
+}
+
+.chapter-close:hover,
+.chapter-close:focus-visible {
+  border-color: var(--orange);
+  background: rgba(255, 107, 43, 0.12);
+  outline: none;
+}
+
 .chapter.is-active .chapter-content {
   opacity: 1;
   pointer-events: auto;
@@ -433,8 +479,19 @@ img {
   object-position: center;
 }
 
+.education-content {
+  grid-template-columns: 1fr;
+  grid-template-rows: 58% minmax(0, 1fr);
+  gap: 12px;
+}
+
+.education-content .chapter-copy {
+  align-self: center;
+  padding: 0 44px 0 12px;
+}
+
 .tud-media img {
-  object-position: 58% center;
+  object-position: center 58%;
 }
 
 .life-media img {
@@ -634,6 +691,34 @@ footer span:last-child {
     padding: 11px;
   }
 
+  .chapter-close {
+    top: 7px;
+    right: 7px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .chapter-close::before,
+  .chapter-close::after {
+    top: 11px;
+    left: 6px;
+    width: 11px;
+  }
+
+  .education-content {
+    grid-template-columns: 38% minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    gap: 9px;
+  }
+
+  .education-content .chapter-copy {
+    padding: 0 30px 0 0;
+  }
+
+  .education-content .tud-media img {
+    object-position: 72% center;
+  }
+
   .chapter-trigger {
     padding: 10px;
   }
@@ -821,6 +906,10 @@ footer span:last-child {
       background-color 160ms ease;
   }
 
+  .chapter-rail:not(.has-active) .chapter {
+    flex: 1;
+  }
+
   .chapter:last-child {
     border-bottom: 0;
   }
@@ -868,6 +957,34 @@ footer span:last-child {
     gap: 9px;
     padding: 8px;
     transform: translateY(8px);
+  }
+
+  .chapter-close {
+    top: 7px;
+    right: 7px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .chapter-close::before,
+  .chapter-close::after {
+    top: 11px;
+    left: 6px;
+    width: 11px;
+  }
+
+  .education-content {
+    grid-template-columns: 38% minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    gap: 9px;
+  }
+
+  .education-content .chapter-copy {
+    padding: 0 30px 0 0;
+  }
+
+  .education-content .tud-media img {
+    object-position: 72% center;
   }
 
   .chapter.is-active .chapter-content {
