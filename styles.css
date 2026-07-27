@@ -77,11 +77,14 @@ img {
   width: fit-content;
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
 }
 
 .brand strong {
-  font-size: 0.9rem;
+  color: var(--ink);
+  font-size: 1.2rem;
+  font-weight: 850;
+  line-height: 1;
 }
 
 .brand span,
@@ -832,12 +835,13 @@ footer > a:focus-visible {
   }
 
   .brand strong {
-    font-size: 0.72rem;
+    font-size: 0.92rem;
+    line-height: 1.05;
   }
 
   .brand span {
     margin-top: 2px;
-    font-size: 0.46rem;
+    font-size: 0.48rem;
   }
 
   .availability {
