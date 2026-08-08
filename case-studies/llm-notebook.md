@@ -1,4 +1,4 @@
-# Llama Notebook Exploration
+# Cult-QA: Llama Notebook based predictor
 
 Kaggle: https://www.kaggle.com/code/dhanjal13/llm-final
 
@@ -21,6 +21,3 @@ This work connects directly to:
 - Technical PDF Translator for Students: translation and review workflows.
 - Future developer tools: LLM-assisted debugging, validation, and documentation.
 
-## Next GitHub Step
-
-Export the Kaggle notebook as `.ipynb`, add a lightweight README, and include a small deterministic demo that can run without paid GPU access.
