@@ -1,32 +1,47 @@
-# Amandeep Singh Portfolio
+# Amandeep Singh — Portfolio
 
-Personal portfolio website for Amandeep Singh, a software engineer and M.Sc. Computer Science student at TU Dresden.
+Personal site for Amandeep Singh: software engineer, M.Sc. Computer Science student
+at TU Dresden, and former Nokia Mobile Networks R&D engineer.
 
-The site presents my journey as a practical software engineer who turns everyday confusion into useful tools. It highlights my problem-first engineering loop, my best product-style projects, and the production discipline I gained from Nokia Networks R&D.
+The site is positioned for telecom and systems roles — it leads with mobile-network
+work (4G/5G, O-RAN, RAN telemetry) and backs each claim with a concrete outcome.
 
-## Live Site
+## Live site
 
-[https://amandesi13.github.io/amandesi-portfolio/](https://amandesi13.github.io/amandesi-portfolio/)
+<https://amandesi13.github.io/amandesi-portfolio/>
 
-## Highlights
+## Structure
 
-- Apple-inspired responsive portfolio design
-- TUD hero photography and personal profile section
-- "How I think" section adapted from my GitHub profile README
-- Experience highlights from Nokia Networks R&D and OPG-layer ownership during Marvell data-plane integration
-- Product-led project sections for Auslander Doc Assistant, Technical PDF Translator for Students, AI-Assisted Firewall Validation Engine, and OAI RAN Metrics xApp Lab
-- Applied AI and data case studies for Llama notebook work and Market Basket Analysis
-- Case-study markdown pages for Kaggle projects
-- Built with plain HTML, CSS, and JavaScript for fast static hosting
+A single scrollable page, one section per idea:
 
-## Local Preview
+| Section        | What it answers                                              |
+| -------------- | ------------------------------------------------------------ |
+| Hero           | Who I am, what I build, what I'm looking for                  |
+| Proof          | Four numbers from real delivery, not adjectives               |
+| Now            | Current O-RAN / xApp research at ComNets, TU Dresden          |
+| Experience     | Nokia timeline — transport-layer C/C++ to data-plane ownership |
+| Selected work  | Four public repositories with the systems problem stated      |
+| Stack          | Grouped capabilities, scannable in one pass                   |
+| About          | Education, publications, languages, availability              |
+| Contact        | One primary action                                            |
+
+## Tech
+
+Plain HTML, CSS, and JavaScript — no build step, no framework, no dependencies
+beyond one webfont. Deployed straight from `main` via GitHub Pages.
+
+Behaviour worth knowing:
+
+- Everything is readable with JavaScript disabled; reveal animations are added by
+  script, never baked into the markup.
+- `prefers-reduced-motion` disables reveals, counters, and smooth scrolling.
+- Images carry intrinsic `width`/`height` to avoid layout shift.
+- `Person` JSON-LD, Open Graph, and Twitter card metadata are in the `<head>`.
+
+## Local preview
 
 ```powershell
 python -m http.server 4173
 ```
 
-Then open:
-
-```text
-http://127.0.0.1:4173
-```
+Then open <http://127.0.0.1:4173>.

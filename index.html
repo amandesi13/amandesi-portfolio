@@ -3,227 +3,687 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Amandeep Singh — Software Engineer, Mobile Network Systems</title>
     <meta
       name="description"
-      content="Amandeep Singh is a software developer in Dresden working across Python, Linux, telecom systems, automation, and quality engineering."
+      content="Software engineer in Dresden working on the software inside mobile networks. Three years in Nokia 4G/5G Mobile Networks R&D; now O-RAN xApps and RAN telemetry at TU Dresden's Deutsche Telekom Chair."
     />
-    <meta name="theme-color" content="#090909" />
-    <title>Amandeep Singh | Software Developer</title>
-    <link rel="preload" as="image" href="assets/amandeep-singh-portrait.png" />
-    <link rel="stylesheet" href="styles.css?v=45" />
-  </head>
-  <body>
-    <main class="portfolio" aria-labelledby="page-title">
-      <header class="topbar">
-        <a class="brand" href="#" aria-label="Amandeep Singh, home">
-          <strong>Amandeep Singh</strong>
-          <span>Software developer / Dresden</span>
-        </a>
+    <link rel="canonical" href="https://amandesi13.github.io/amandesi-portfolio/" />
+    <meta name="theme-color" content="#0a0f18" />
+    <meta name="color-scheme" content="dark" />
 
-        <p class="availability">
-          <i aria-hidden="true"></i>
-          Open to working-student roles
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Amandeep Singh — Software Engineer, Mobile Network Systems" />
+    <meta
+      property="og:description"
+      content="Three years in Nokia's 4G/5G R&D. Now building O-RAN xApps and RAN telemetry at TU Dresden's Deutsche Telekom Chair."
+    />
+    <meta property="og:url" content="https://amandesi13.github.io/amandesi-portfolio/" />
+    <meta property="og:image" content="https://amandesi13.github.io/amandesi-portfolio/assets/amandeep-singh-portrait.jpg" />
+    <meta property="og:image:alt" content="Portrait of Amandeep Singh" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0f18'/%3E%3Cpath d='M7 24 16 8l9 16' stroke='%235fa2e0' stroke-width='2.6' fill='none' stroke-linejoin='round'/%3E%3Cpath d='M11.5 19h9' stroke='%235ac9a6' stroke-width='2.2'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    />
+    <link rel="preload" as="image" href="assets/amandeep-singh-portrait.jpg" />
+    <link rel="stylesheet" href="styles.css?v=70" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Amandeep Singh",
+        "jobTitle": "Software Engineer",
+        "url": "https://amandesi13.github.io/amandesi-portfolio/",
+        "email": "mailto:amandeep.dev.eu@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dresden",
+          "addressCountry": "DE"
+        },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Technische Universität Dresden" },
+          { "@type": "CollegeOrUniversity", "name": "BMS Institute of Technology & Management" }
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Deutsche Telekom Chair of Communication Networks, TU Dresden"
+        },
+        "knowsAbout": [
+          "5G NR",
+          "4G LTE",
+          "O-RAN",
+          "xApps",
+          "RAN telemetry",
+          "Packet processing",
+          "Embedded Linux",
+          "Kubernetes",
+          "Python",
+          "C++"
+        ],
+        "sameAs": [
+          "https://github.com/amandesi13",
+          "https://www.linkedin.com/in/amandesi/"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="site-nav">
+      <a class="nav-brand" href="#top">
+        <span class="nav-mark" aria-hidden="true"></span>
+        <span class="nav-name">
+          <strong>Amandeep Singh</strong>
+          <small>Software Engineer · Dresden</small>
+        </span>
+      </a>
+
+      <nav class="nav-sections" aria-label="Sections">
+        <a href="#approach">Approach</a>
+        <a href="#now">Now</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/amandesi13">GitHub</a>
+        <a class="btn btn-solid" href="mailto:amandeep.dev.eu@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ───────────────────────────── HERO ───────────────────────────── -->
+      <section class="hero" id="top">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Ex-Nokia 4G/5G R&amp;D · TU Dresden ComNets</p>
+
+            <h1>
+              I build the software
+              <em>inside</em> mobile networks.
+              <span>And the tooling that proves it works.</span>
+            </h1>
+
+            <p class="lede">
+              Three years in Nokia's Mobile Networks R&amp;D taught me that
+              carrier software is judged at 3 a.m., not in the demo. I worked the
+              data plane — transport-layer C/C++ on embedded Linux, packet
+              processing, QoS — and spent most of my time following faults across
+              software, networking and hardware until the cause was provable
+              rather than plausible. Now I build O-RAN xApps and RAN telemetry at
+              TU Dresden's Deutsche Telekom Chair of Communication Networks.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-solid btn-lg" href="mailto:amandeep.dev.eu@gmail.com">
+                Start a conversation
+              </a>
+              <a class="btn btn-ghost btn-lg" href="https://www.linkedin.com/in/amandesi/">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <figure class="hero-portrait">
+            <img
+              src="assets/amandeep-singh-portrait.jpg"
+              alt="Portrait of Amandeep Singh"
+              width="900"
+              height="1353"
+              fetchpriority="high"
+            />
+            <figcaption>
+              <strong>Amandeep Singh</strong>
+              <span>Dresden, Germany</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────── APPROACH ─────────────────────────── -->
+      <section class="section" id="approach">
+        <div class="section-head">
+          <p class="section-index">01 — Approach</p>
+          <h2>What carrier-grade R&amp;D actually teaches you.</h2>
+          <p class="section-sub">Mostly humility. Usually at 3 a.m.</p>
+        </div>
+
+        <div class="approach-grid">
+          <ol class="principles">
+            <li>
+              <h3>The bug is never where the ticket says it is.</h3>
+              <p>
+                Ticket blames the data plane. Data plane blames the hardware.
+                Hardware replies that it works fine on <em>its</em> board. The
+                faults that reached me at Nokia lived in the gaps between
+                subsystems — often a config someone set years ago that everyone
+                since had been too polite to touch. So I follow them through
+                logs, traces and packet captures until something confesses. The
+                first plausible story is not a root cause; it's just the first
+                story.
+              </p>
+            </li>
+            <li>
+              <h3>If a system can't explain itself, I don't believe it.</h3>
+              <p>
+                &ldquo;It&rsquo;s probably fine&rdquo; is not a metric. I build
+                the endpoints, dashboards and detection that make a system say
+                out loud what it&rsquo;s actually doing — currently live RAN
+                metrics on 5G testbeds, where &ldquo;probably fine&rdquo; can
+                mean a cell quietly shedding throughput while everyone sleeps
+                soundly.
+              </p>
+            </li>
+            <li>
+              <h3>Research is lovely. The release still ships.</h3>
+              <p>
+                I've owned a third-party data-plane integration end to end on a
+                live product line: integration plan, QoS and interface
+                validation, release evidence, and the deployment doc other teams
+                later quoted back at me. Deadlines remain deeply unimpressed by
+                how interesting the problem is.
+              </p>
+            </li>
+          </ol>
+
+          <figure class="approach-visual">
+            <img
+              src="assets/hover-desk.jpg"
+              alt="Workstation with a Nokia display and a die-cast model collection"
+              width="1200"
+              height="680"
+              loading="lazy"
+            />
+            <figcaption>
+              The desk where most of that tracing happened. The die-cast
+              collection is load-bearing.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────── NOW ────────────────────────────── -->
+      <section class="section" id="now">
+        <div class="section-head">
+          <p class="section-index">02 — Now</p>
+          <h2>Making radio networks explain themselves.</h2>
+          <p class="section-sub">
+            Student research assistant at the Deutsche Telekom Chair of
+            Communication Networks, TU Dresden.
+          </p>
+        </div>
+
+        <div class="now-panel">
+          <figure class="now-visual">
+            <img
+              src="assets/tud-barkhausen-bau.jpg"
+              alt="The Barkhausen-Bau at TU Dresden, home of the Faculty of Electrical and Computer Engineering"
+              width="1800"
+              height="864"
+              loading="lazy"
+            />
+            <figcaption>
+              <img
+                class="comnets-mark"
+                src="assets/comnets-logo-negative.png"
+                alt="ComNets"
+                width="230"
+                height="46"
+                loading="lazy"
+              />
+              <span class="now-role">Student Research Assistant (WHK) · 07/2026 — Present</span>
+              <span class="credit">
+                Barkhausen-Bau, TU Dresden — the Faculty of Electrical and
+                Computer Engineering. Photo:
+                <a href="https://commons.wikimedia.org/wiki/File:DD-Barkhausenbau-2.jpg">SchiDD</a>,
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+                via Wikimedia Commons.
+              </span>
+            </figcaption>
+          </figure>
+
+          <div class="now-copy">
+            <ul class="lines">
+              <li>
+                <strong>xApp-style services</strong> for near-real-time metric
+                collection against <b>FlexRIC</b> and <b>OpenAirInterface</b> 5G
+                testbeds, contributing to O-RAN intelligence research.
+              </li>
+              <li>
+                <strong>Python microservices on Kubernetes</strong> exposing live
+                RAN metrics — PRB utilisation, SINR, throughput — over REST and
+                Prometheus, surfaced in Grafana dashboards.
+              </li>
+              <li>
+                <strong>Statistical anomaly detection</strong> across
+                multi-dimensional KPI streams to flag abnormal gNB and cell
+                behaviour, validated against labelled measurement runs.
+              </li>
+            </ul>
+
+            <ul class="tags">
+              <li>O-RAN</li>
+              <li>xApp</li>
+              <li>FlexRIC</li>
+              <li>OAI</li>
+              <li>Kubernetes</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─────────────────────────── EXPERIENCE ───────────────────────── -->
+      <section class="section" id="experience">
+        <div class="section-head">
+          <p class="section-index">03 — Experience</p>
+          <h2>Three years on a live product line.</h2>
+          <p class="section-sub">
+            Nokia Mobile Networks R&amp;D — from transport-layer C/C++ to owning
+            data-plane integration.
+          </p>
+        </div>
+
+        <div class="timeline-wrap">
+          <ol class="timeline">
+            <li>
+              <p class="tl-date">07/2024 — 09/2025</p>
+              <div class="tl-body">
+                <h3>Software Engineer <span>Nokia Networks</span></h3>
+                <p class="tl-meta">Mobile Networks R&amp;D · Bengaluru, India</p>
+                <ul class="lines">
+                  <li>
+                    Owned integration of third-party <b>Marvell data-plane
+                    modules</b> into Nokia's OPG/VPP packet-processing platform —
+                    QoS behaviour, interface handling, and the validation
+                    evidence that went with the customer release.
+                  </li>
+                  <li>
+                    Debugged production faults across software, networking and
+                    hardware boundaries on a commercial 4G/5G product line, using
+                    logs, traces and packet captures to isolate causes that
+                    spanned several subsystems.
+                  </li>
+                  <li>
+                    Wrote the <b>Kubernetes/5G deployment reference</b> that R&amp;D
+                    adopted for system bring-up, and presented findings to
+                    engineering and product stakeholders.
+                  </li>
+                </ul>
+                <ul class="tags">
+                  <li>VPP/DPDK</li>
+                  <li>QoS</li>
+                  <li>Wireshark</li>
+                  <li>Kubernetes</li>
+                  <li>C/C++</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <p class="tl-date">09/2022 — 06/2024</p>
+              <div class="tl-body">
+                <h3>Associate Software Engineer <span>Nokia Networks</span></h3>
+                <p class="tl-meta">Mobile Networks R&amp;D · Bengaluru, India</p>
+                <ul class="lines">
+                  <li>
+                    Maintained and extended <b>C/C++ transport-layer software</b>
+                    for 4G/5G base-station platforms across embedded Linux stacks.
+                  </li>
+                  <li>
+                    Built the CI validation pipelines in <b>Jenkins and Gerrit</b>
+                    that made regressions visible before release rather than after
+                    it.
+                  </li>
+                </ul>
+                <ul class="tags">
+                  <li>Jenkins</li>
+                  <li>Gerrit</li>
+                  <li>Embedded Linux</li>
+                  <li>Test automation</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <p class="tl-date">03/2022 — 08/2022</p>
+              <div class="tl-body">
+                <h3>Student Trainee <span>Nokia Networks</span></h3>
+                <p class="tl-meta">Mobile Networks R&amp;D · Bengaluru, India</p>
+                <ul class="lines">
+                  <li>
+                    Worked on automated testing and debugging of commercial 4G/5G
+                    network software <strong>while studying full-time</strong> —
+                    the same working-student model I'm looking for now.
+                  </li>
+                </ul>
+                <ul class="tags">
+                  <li>RAN architecture</li>
+                  <li>Protocol stacks</li>
+                  <li>Git</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <p class="tl-date">06/2021 — 11/2021</p>
+              <div class="tl-body">
+                <h3>Web Developer &amp; BD <span>Kohort</span></h3>
+                <p class="tl-meta">Student learning platform · Bengaluru, India</p>
+                <ul class="lines">
+                  <li>
+                    Built the student-facing platform and its analytics dashboard;
+                    led investor outreach and secured seed funding through
+                    <b>NSRCEL, IIM Bengaluru</b>.
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+
+          <figure class="tl-visual">
+            <img
+              src="assets/amandeep-nokia-office.jpg"
+              alt="Amandeep Singh outside the Nokia office in Bengaluru"
+              width="462"
+              height="676"
+              loading="lazy"
+            />
+            <figcaption>Nokia, Bengaluru — Mobile Networks R&amp;D, 2022–2025.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────────────────────────── WORK ───────────────────────────── -->
+      <section class="section" id="work">
+        <div class="section-head">
+          <p class="section-index">04 — Selected work</p>
+          <h2>Things I built to prove a point.</h2>
+          <p class="section-sub">
+            Open source, and every one of them started with me being specifically
+            annoyed by something.
+          </p>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">
+            <p class="card-kicker">RAN observability</p>
+            <h3>OAI RAN Metrics &amp; xApp Lab</h3>
+            <p>
+              Kubernetes-deployed xApp-style microservices that collect live gNB,
+              cell and UE metrics, expose them as Prometheus endpoints, and chart
+              them in Grafana with anomaly detection on top.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Kubernetes</li>
+              <li>FastAPI</li>
+              <li>Prometheus</li>
+            </ul>
+            <span class="card-go">View repository<i aria-hidden="true"></i></span>
+          </a>
+
+          <a class="card" href="https://github.com/amandesi13/reliability-control-plane">
+            <p class="card-kicker">Distributed systems</p>
+            <h3>Reliability Control Plane</h3>
+            <p>
+              Correlates telemetry across services and evaluates reliability
+              policies as code — answering <em>why</em> a system is degrading
+              instead of adding more alert noise.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Telemetry</li>
+              <li>Policy-as-code</li>
+            </ul>
+            <span class="card-go">View repository<i aria-hidden="true"></i></span>
+          </a>
+
+          <a class="card" href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">
+            <p class="card-kicker">Network security</p>
+            <h3>AI-Assisted Firewall Validation Engine</h3>
+            <p>
+              Simulates packet flow through a rule set to catch shadowed,
+              duplicate and overly permissive firewall rules before they deploy —
+              packaged as a CI quality gate.
+            </p>
+            <ul class="tags">
+              <li>Python</li>
+              <li>Docker</li>
+              <li>GitHub Actions</li>
+              <li>LLM</li>
+            </ul>
+            <span class="card-go">View repository<i aria-hidden="true"></i></span>
+          </a>
+
+          <a class="card" href="https://github.com/amandesi13/auslander-doc-assistant">
+            <p class="card-kicker">Applied AI</p>
+            <h3>Ausländer Doc Assistant</h3>
+            <p>
+              Privacy-first, local-first tool that reads German bureaucratic
+              letters, extracts the deadlines and fees, and drafts a polite
+              reply. Built at 11 p.m. the night I realised a letter I couldn't
+              read had a date on it.
+            </p>
+            <ul class="tags">
+              <li>FastAPI</li>
+              <li>PyMuPDF</li>
+              <li>OCR</li>
+              <li>Docker</li>
+            </ul>
+            <span class="card-go">View repository<i aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────── STACK ───────────────────────────── -->
+      <section class="section" id="stack">
+        <div class="section-head">
+          <p class="section-index">05 — Stack</p>
+          <h2>Tools matter. Connecting them is the skill.</h2>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-col">
+            <h3>Mobile networks</h3>
+            <ul>
+              <li>4G/LTE · 5G NR</li>
+              <li>O-RAN · RIC · xApps</li>
+              <li>E2/KPM metrics</li>
+              <li>OpenAirInterface · FlexRIC</li>
+              <li>PRB · SINR · throughput KPIs</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Networking</h3>
+            <ul>
+              <li>TCP/IP · transport layer</li>
+              <li>VPP / DPDK packet processing</li>
+              <li>QoS &amp; interface config</li>
+              <li>Wireshark · tcpdump</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>C / C++</li>
+              <li>Bash</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Cloud &amp; DevOps</h3>
+            <ul>
+              <li>Kubernetes · Docker · Helm</li>
+              <li>Linux, incl. embedded</li>
+              <li>Jenkins · Gerrit · GitHub Actions</li>
+              <li>Git · GitOps</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Quality</h3>
+            <ul>
+              <li>Automated test design</li>
+              <li>Regression &amp; feature testing</li>
+              <li>Root-cause analysis</li>
+              <li>pytest · release evidence</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Data &amp; AI</h3>
+            <ul>
+              <li>Prometheus · Grafana</li>
+              <li>Pandas · NumPy</li>
+              <li>Anomaly detection</li>
+              <li>LoRA/qLoRA fine-tuning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ──────────────────────────── ABOUT ───────────────────────────── -->
+      <section class="section" id="about">
+        <div class="section-head">
+          <p class="section-index">06 — About</p>
+          <h2>Bengaluru to Dresden, one system at a time.</h2>
+          <p class="section-sub">
+            I moved to Dresden in 2025 after three years at Nokia, to go deeper
+            on the systems side of networks rather than wider on frameworks.
+            Everything I enjoy turns out to be the same job in different clothes:
+            take something opaque — a fault, a firewall rule set, a letter from
+            the Ausländerbehörde — and make it legible. That last one became an
+            actual project.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual">
+            <figure>
+              <img
+                src="assets/tud-hero-amandeep.jpg"
+                alt="Amandeep Singh beside the TU Dresden sign"
+                width="1200"
+                height="877"
+                loading="lazy"
+              />
+              <figcaption>
+                TU Dresden, 2025 — moved 7,000 km for colder weather and harder
+                questions.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="assets/outside-work-dresden.jpg"
+                alt="Amandeep Singh by the Elbe river in Dresden"
+                width="1200"
+                height="1600"
+                loading="lazy"
+              />
+              <figcaption>By the Elbe, where most debugging actually gets solved.</figcaption>
+            </figure>
+          </div>
+
+          <div class="about-copy">
+            <div class="fact-block">
+              <h3>Education</h3>
+              <p>
+                <strong>M.Sc. Computer Science</strong> — TU Dresden, 10/2025 →
+                expected 2027. Distributed Systems, Machine Learning, Large
+                Language Models, Cloud Security, Software Management &amp; QA.
+              </p>
+              <p>
+                <strong>B.E. Information Science &amp; Engineering</strong> —
+                BMSIT&amp;M, VTU · First Class with Distinction.
+              </p>
+            </div>
+
+            <div class="fact-block">
+              <h3>Published</h3>
+              <p>
+                <strong>A Review on Privacy and Security in 6G Networks</strong> —
+                IEEE International Conference on FABS, 2021.
+              </p>
+              <p>
+                <strong>Kubernetes Container Framework Overview &amp;
+                Deployment</strong> — Nokia Networks internal white paper, 2024.
+              </p>
+            </div>
+
+            <div class="fact-block">
+              <h3>Off the clock</h3>
+              <p>
+                Basketball, die-cast models and stamps. Two of those three are
+                easy to explain at parties; I've stopped defending the stamps.
+                All of them are the same instinct — small objects with design,
+                history and a story packed inside. Currently also in the
+                <b>YETI Dresden G9</b> entrepreneurship cohort with
+                dresden|exists.
+              </p>
+            </div>
+
+            <div class="fact-block availability">
+              <h3>Languages &amp; availability</h3>
+              <p>
+                English C1 (IELTS 8.0) · German A1.2, in active coursework ·
+                Hindi and Punjabi native.
+              </p>
+              <p>
+                Open to working-student roles from <strong>November 2026</strong>,
+                up to 20 h/week during semester. German residence permit in place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ─────────────────────────── CONTACT ────────────────────────────── -->
+    <footer id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow">07 — Contact</p>
+        <h2>Let's build something useful.</h2>
+        <p class="contact-sub">
+          Looking for a working-student role where mobile networks, Linux and
+          automation meet. Dresden-based, open to remote and hybrid, available
+          from November 2026.
         </p>
 
-        <nav aria-label="Contact links">
-          <a href="https://github.com/amandesi13">GitHub</a>
-          <a href="https://www.linkedin.com/in/amandesi/">LinkedIn</a>
-          <a href="mailto:amandeep.dev.eu@gmail.com">Email</a>
-        </nav>
-      </header>
-
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">TU Dresden / ComNets / Ex-Nokia R&amp;D</p>
-          <h1 id="page-title">BUILD CLEAR.<span>SHIP RELIABLE.</span></h1>
-          <p class="hero-summary">
-            I turn uncertain workflows into dependable software across Python,
-            Linux, telecom, automation, and AI-assisted systems.
-          </p>
-          <div class="current-role">
-            <span>Now</span>
-            <p><strong>Student Research Assistant</strong>O-RAN and xApp deployment at ComNets.</p>
+        <div class="contact-links">
+          <a class="contact-primary" href="mailto:amandeep.dev.eu@gmail.com">
+            amandeep.dev.eu@gmail.com
+            <i aria-hidden="true"></i>
+          </a>
+          <div class="contact-secondary">
+            <a href="https://www.linkedin.com/in/amandesi/">LinkedIn</a>
+            <a href="https://github.com/amandesi13">GitHub</a>
           </div>
         </div>
 
-        <figure class="hero-portrait">
-          <img src="assets/amandeep-singh-portrait.png" alt="Amandeep Singh" />
-          <figcaption>Engineer. Researcher. Systems thinker.</figcaption>
-        </figure>
-      </section>
-
-      <section class="chapters" aria-label="Portfolio chapters">
-        <div class="chapters-heading">
-          <p class="chapters-title">
-            <strong>Chapters</strong>
-            <span>Work, study, systems, and life.</span>
-          </p>
-          <p class="interaction-hint"><i aria-hidden="true"></i>Hover to preview. Tap to keep.</p>
+        <div class="contact-foot">
+          <span>Dresden, Germany</span>
+          <strong>Humility and humanity above all.</strong>
+          <span>© <span id="year">2026</span> Amandeep Singh</span>
         </div>
+      </div>
+    </footer>
 
-        <div class="chapter-rail" role="tablist" aria-label="Portfolio chapters" tabindex="-1">
-          <article class="chapter" data-chapter="nokia">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="false" aria-controls="panel-nokia">
-              <span>01</span>
-              <strong>Nokia</strong>
-              <small>Experience</small>
-            </button>
-            <div class="chapter-content" id="panel-nokia" role="tabpanel" aria-hidden="true">
-              <button class="chapter-close" type="button" aria-label="Close Nokia chapter"></button>
-              <div class="chapter-media">
-                <img src="assets/hover-nokia.jpg" alt="Amandeep outside a Nokia office" />
-              </div>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">3+ years in telecom R&amp;D</p>
-                <h2>From fault traces to production confidence.</h2>
-                <p>
-                  C/C++, Python, Linux, validation pipelines, production debugging,
-                  and OPG-layer ownership taught me to trace the full system and
-                  protect quality before release.
-                </p>
-                <div class="tags">
-                  <span>Debugging</span><span>Automation</span><span>Ownership</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="chapter" data-chapter="projects">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="false" aria-controls="panel-projects">
-              <span>02</span>
-              <strong>Work</strong>
-              <small>20+ builds</small>
-            </button>
-            <div class="chapter-content project-content" id="panel-projects" role="tabpanel" aria-hidden="true">
-              <button class="chapter-close" type="button" aria-label="Close projects chapter"></button>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">Projects &amp; production deliveries</p>
-                <h2>Built across AI, data, telecom, automation, and quality.</h2>
-                <p>
-                  A few public anchors from a wider catalogue of academic
-                  prototypes, R&amp;D tooling, validation systems, and production
-                  workflows.
-                </p>
-                <div class="project-links">
-                  <a href="https://github.com/amandesi13/reliability-control-plane">Reliability control plane <i aria-hidden="true"></i></a>
-                  <a href="https://github.com/amandesi13/auslander-doc-assistant">Document assistant <i aria-hidden="true"></i></a>
-                  <a href="https://github.com/amandesi13/oai-ran-metrics-xapp-lab">RAN metrics xApp <i aria-hidden="true"></i></a>
-                  <a href="https://github.com/amandesi13/AI-Assisted-Firewall-Validation-Engine">Firewall validator <i aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="chapter" data-chapter="studies">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="false" aria-controls="panel-studies">
-              <span>03</span>
-              <strong>M.Sc.</strong>
-              <small>Postgrad</small>
-            </button>
-            <div class="chapter-content education-content" id="panel-studies" role="tabpanel" aria-hidden="true">
-              <button class="chapter-close" type="button" aria-label="Close education chapter"></button>
-              <div class="chapter-media tud-media">
-                <img src="assets/tud-hero-amandeep.jpeg" alt="Amandeep seated beside the TU Dresden sign" />
-              </div>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">Postgraduate journey / semester 2</p>
-                <h2>From Bengaluru to deeper systems thinking in Dresden.</h2>
-                <p>
-                  After Information Science and Engineering at BMSIT, I moved to
-                  TU Dresden for Computer Science. Current work spans Infovis,
-                  Security &amp; Cryptography, Software Management &amp; QA, and
-                  Future-Proof Software Systems.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="chapter is-active" data-chapter="comnets">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="true" aria-controls="panel-comnets">
-              <span>04</span>
-              <strong>ComNets</strong>
-              <small>Current role</small>
-            </button>
-            <div class="chapter-content" id="panel-comnets" role="tabpanel" aria-hidden="false">
-              <button class="chapter-close" type="button" aria-label="Close current role chapter"></button>
-              <div class="comnets-visual">
-                <img src="assets/comnets-logo-negative.png" alt="ComNets" />
-                <span>Student Research Assistant</span>
-              </div>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">O-RAN &amp; xApp deployment</p>
-                <h2>Making telecom systems observable.</h2>
-                <p>
-                  I work on xApp development and deployment, RAN metrics,
-                  Linux/Python workflows, and observability: collecting the right
-                  signals and turning system behaviour into evidence.
-                </p>
-                <div class="tags">
-                  <span>O-RAN</span><span>Python</span><span>Metrics</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="chapter" data-chapter="skills">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="false" aria-controls="panel-skills">
-              <span>05</span>
-              <strong>Stack</strong>
-              <small>Systems</small>
-            </button>
-            <div class="chapter-content" id="panel-skills" role="tabpanel" aria-hidden="true">
-              <button class="chapter-close" type="button" aria-label="Close skills chapter"></button>
-              <div class="skill-visual" aria-hidden="true">
-                <span>BUILD</span><span>OPERATE</span><span>VERIFY</span>
-                <b>Python</b><b>C/C++</b><b>Linux</b><b>Docker</b><b>CI/CD</b><b>pytest</b>
-              </div>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">A systems-first toolkit</p>
-                <h2>Tools matter. Connecting them is the skill.</h2>
-                <p>
-                  Python, C/C++, Bash, FastAPI, REST, Linux, Git, Docker,
-                  Kubernetes, CI/CD, pytest, Prometheus, Grafana, OCR, and LLM
-                  workflows.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article class="chapter" data-chapter="life">
-            <button class="chapter-trigger" type="button" role="tab" aria-selected="false" aria-controls="panel-life">
-              <span>06</span>
-              <strong>Life</strong>
-              <small>Outside work</small>
-            </button>
-            <div class="chapter-content" id="panel-life" role="tabpanel" aria-hidden="true">
-              <button class="chapter-close" type="button" aria-label="Close outside-work chapter"></button>
-              <div class="chapter-media life-media">
-                <img src="assets/outside-work-dresden.jpeg" alt="Amandeep by the Elbe in Dresden" />
-              </div>
-              <div class="chapter-copy">
-                <p class="chapter-kicker">Beyond the terminal</p>
-                <h2>Basketball, technology, die-casts, and philately.</h2>
-                <p>
-                  Sport keeps me moving. Technology keeps me curious. Die-cast
-                  models and stamps keep me close to design, history, and the
-                  stories hidden inside small objects.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <footer>
-        <span>Dresden, Germany</span>
-        <strong>Humility and humanity above all.</strong>
-        <a href="mailto:amandeep.dev.eu@gmail.com">
-          Let's build something useful.
-          <i aria-hidden="true"></i>
-        </a>
-      </footer>
-    </main>
-
-    <script src="script.js?v=20"></script>
+    <script src="script.js?v=40" defer></script>
   </body>
 </html>
